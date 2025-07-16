@@ -1,0 +1,112 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --text-color: hsl(0, 0%, 100%);
+  --bg-color: hsl(243, 92%, 10%);
+  --accent-color: hsl(160, 70%, 60%); /* #52e0b1 */
+  --ff: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --ff2: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --p: 1rem/1.5em var(--ff2);
+  --p-cards: 0.9rem/1.5em var(--ff2);
+  --h1: 700 3rem/1.2em var(--ff);
+  --h2: 600 2rem/1.2em var(--ff);
+  --h3: 500 1.5rem/1.2em var(--ff);
+  --h4: 600 1.2rem/1.2em var(--ff);
+  --spacing1: 4px;
+  --spacing2: 8px;
+  --spacing3: 16px;
+  --spacing4: 20px;
+  --spacing5: 40px;
+  --spacing6: 80px;
+  --spacing7: 160px;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font: var(--p);
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+h1 {
+  font: var(--h1);
+}
+h2 {
+  font: var(--h2);
+  margin: var(--spacing2) 0;
+}
+h3 {
+  font: var(--h3);
+  margin: var(--spacing2) 0;
+}
+h4 {
+  font: var(--h4);
+  margin: var(--spacing2) 0;
+}
+p {
+  margin: var(--spacing2) 0;
+}
+img {
+  width: 100%;
+}
+
+/* Utility Classes */
+.center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+.padding1 {
+  padding: var(--spacing1) 0;
+}
+.padding2 {
+  padding: var(--spacing2) 0;
+}
+.padding3 {
+  padding: var(--spacing3) 0;
+}
+.padding4 {
+  padding: var(--spacing4) 0;
+}
+.padding5 {
+  padding: var(--spacing5) 0;
+}
+.padding6 {
+  padding: var(--spacing6) 0;
+}
+.padding7 {
+  padding: var(--spacing7) 0;
+}
+.margin1 {
+  margin: var(--spacing1) auto;
+}
+.margin2 {
+  margin: var(--spacing2) auto;
+}
+.margin3 {
+  margin: var(--spacing3) auto;
+}
+.margin4 {
+  margin: var(--spacing4) auto;
+}
+.margin5 {
+  margin: var(--spacing5) auto;
+}
+.margin6 {
+  margin: var(--spacing6) auto;
+}
+.margin7 {
+  margin: var(--spacing7) auto;
+}
