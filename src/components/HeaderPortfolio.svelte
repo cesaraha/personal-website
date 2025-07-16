@@ -54,7 +54,6 @@
         <a href={'#Background'}>Background</a>
         <a href={'#Experiences'}>Experiences</a>
         <a href={'#Projects'}>Projects</a>
-        <a href={'#Contact'}>Contact</a>
     </nav>
 </header>
 
