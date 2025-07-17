@@ -1,22 +1,33 @@
+<script>
+	import { currentLanguage } from '../stores/language.js';
+	import { translations } from '../lib/translations.js';
+
+	$: t = translations[$currentLanguage].welcome;
+</script>
+
+<svelte:head>
+	<title>{t.title}</title>
+</svelte:head>
+
 <div class="full-page">
 	<div class="contents">
 		<div class="question-container">
-			<h2 class="question">What are you looking for?</h2>
+			<h2 class="question">{t.question}</h2>
 		</div>
 		<div class="button-pair">
-			<a href="/portfolio" class="btn">Portfolio</a>
-			<a href="/freelance" class="btn">Freelance</a>
+			<a href="/portfolio" class="btn">{t.portfolio}</a>
+			<a href="/freelance" class="btn">{t.freelance}</a>
 		</div>
 	</div>
 </div>
 
 <style>
-    .full-page {
+	.full-page {
 		width: 90%;
 		max-width: 1120px;
 		height: 100vh;
 		margin: auto;
-        padding: var(--spacing3);
+		padding: var(--spacing3);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
