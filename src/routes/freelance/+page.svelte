@@ -6,6 +6,10 @@
 	import Contact from '../../components/Contact.svelte';
 </script>
 
+<svelte:head>
+    <title>Freelance services</title>
+</svelte:head>
+
 <HeaderFreelance />
 <HeroSection
 	backgroundImage="img/develop.jpg"

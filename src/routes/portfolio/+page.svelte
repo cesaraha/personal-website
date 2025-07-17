@@ -6,6 +6,10 @@
 	import About from '../../components/About.svelte';
 </script>
 
+<svelte:head>
+    <title>Portfolio</title>
+</svelte:head>
+
 <HeaderPortfolio />
 <section id="About">
 	<About
