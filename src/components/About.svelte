@@ -29,20 +29,19 @@
 
 <style>
   .about-section {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing5);
-    background: var(--bg-color);
+    padding: 0 var(--spacing5);
   }
 
   .container {
-    max-width: 1000px;
+    max-width: 1080px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-wrap: justify;
   }
 
   .main-content {

@@ -1,5 +1,7 @@
 <script lang="ts">
     import { onMount, onDestroy } from 'svelte';
+    import { currentLanguage } from '../stores/language.js';
+    
     let hamOpen = false;
     let navRef: HTMLElement | null = null;
     let hamRef: HTMLElement | null = null;
@@ -26,6 +28,18 @@
         }
     }
     
+    // Language selection functions
+    function setLanguage(lang: 'fr' | 'en' | 'sp') {
+        currentLanguage.set(lang);
+    }
+    
+    function handleLangKeydown(event: KeyboardEvent, lang: 'fr' | 'en' | 'sp') {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            setLanguage(lang);
+        }
+    }
+    
     onMount(() => {
         document.addEventListener('click', handleClickOutside);
         document.addEventListener('keydown', handleKeydown);
@@ -40,20 +54,56 @@
     <a href={'/'} class="logo-link">
         <img class="logo" src="img/Caha-logo.png" alt="Caha logo" />
     </a>
-    <button 
-        class="ham" 
-        on:click={toggleMenu} 
-        bind:this={hamRef}
-        aria-label="Toggle navigation"
-        aria-expanded={hamOpen}
-    >
-        <img src={hamOpen ? 'img/xmark-solid.svg' : 'img/bars-solid.svg'} alt="" />
-    </button>
-    <nav class:show={hamOpen} bind:this={navRef}>
-        <a href={'#About'}>About me</a>
-        <a href={'#Projects'}>Projects</a>
-        <a href={'#Contact'}>Contact</a>
-    </nav>
+    
+    <div class="center-content">
+        <button 
+            class="ham" 
+            on:click={toggleMenu} 
+            bind:this={hamRef}
+            aria-label="Toggle navigation"
+            aria-expanded={hamOpen}
+        >
+            <img src={hamOpen ? 'img/xmark-solid.svg' : 'img/bars-solid.svg'} alt="" />
+        </button>
+        <nav class:show={hamOpen} bind:this={navRef}>
+            <a href={'#About'}>About me</a>
+            <a href={'#Projects'}>Projects</a>
+            <a href={'#Contact'}>Contact</a>
+        </nav>
+    </div>
+    
+    <div class="language-selection">
+        <button
+            type="button"
+            class="flag-button"
+            class:active={$currentLanguage === 'fr'}
+            on:click={() => setLanguage('fr')}
+            on:keydown={(e) => handleLangKeydown(e, 'fr')}
+            aria-label="Switch to French"
+        >
+            <img src="img/fra-lang.png" class="flag" alt="French flag" />
+        </button>
+        <button
+            type="button"
+            class="flag-button"
+            class:active={$currentLanguage === 'en'}
+            on:click={() => setLanguage('en')}
+            on:keydown={(e) => handleLangKeydown(e, 'en')}
+            aria-label="Switch to English"
+        >
+            <img src="img/eng-lang.png" class="flag" alt="English flag" />
+        </button>
+        <button
+            type="button"
+            class="flag-button"
+            class:active={$currentLanguage === 'sp'}
+            on:click={() => setLanguage('sp')}
+            on:keydown={(e) => handleLangKeydown(e, 'sp')}
+            aria-label="Switch to Spanish"
+        >
+            <img src="img/spa-lang.png" class="flag" alt="Spanish flag" />
+        </button>
+    </div>
 </header>
 
 <style>
@@ -73,6 +123,14 @@
         z-index: 1000;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .center-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        position: relative;
     }
     
     nav {
@@ -108,6 +166,42 @@
         filter: none;
     }
     
+    /* Language selection styles */
+    .language-selection {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing2);
+    }
+    
+    .flag-button {
+        all: unset;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .flag-button:hover,
+    .flag-button:focus {
+        transform: scale(1.1);
+        outline: 2px solid var(--accent-color, #0066cc);
+        outline-offset: 2px;
+    }
+    
+    .flag-button.active {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .flag {
+        width: 24px;
+        height: 24px;
+        display: block;
+        pointer-events: none;
+    }
+    
     @media (max-width: 800px) {
         header {
             padding: var(--spacing2) var(--spacing4);
@@ -140,6 +234,16 @@
         /* Remove dividers on mobile */
         nav.show a:not(:last-child)::before {
             display: none;
+        }
+        
+        /* Adjust language selection on mobile */
+        .language-selection {
+            gap: var(--spacing1);
+        }
+        
+        .flag {
+            width: 20px;
+            height: 20px;
         }
     }
     

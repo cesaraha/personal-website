@@ -102,7 +102,7 @@
     .card-section {
         width: 90%;
 		max-width: 1120px;
-        margin: var(--spacing6) auto;
+        margin: var(--spacing2) auto;
         text-wrap: balance;
         padding: var(--spacing4) var(--spacing5);
     }

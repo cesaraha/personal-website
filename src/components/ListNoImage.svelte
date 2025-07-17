@@ -1,8 +1,8 @@
 <script>
 	export let titleSection;
-	export let heading;
-	export let placeAndDate;
-	export let details;
+	export let heading1;
+	export let placeAndDate1;
+	export let details1;
 	export let heading2;
 	export let placeAndDate2;
 	export let details2;
@@ -14,25 +14,31 @@
 <div class="list-cards-section">
 	<h1>{titleSection}</h1>
 	<div class="cards-column margin5 flex">
-		<div class="card-fill margin5 flex">
-			<div class="elem-body">
-				<h3 class="elem-title">{heading}</h3>
-				<h4 class="elem-place-date">{placeAndDate}</h4>
-				<p class="elem-text">{details}</p>
+		<div class="full-card">
+			<div class="card-fill margin5 flex">
+				<div class="elem-body">
+					<h3 class="elem-title">{heading1}</h3>
+					<h4 class="elem-place-date">{placeAndDate1}</h4>
+					<p class="elem-text">{details1}</p>
+				</div>
 			</div>
 		</div>
-		<div class="card-fill margin5 flex">
-			<div class="elem-body">
-				<h3 class="elem-title">{heading2}</h3>
-				<h4 class="elem-place-date">{placeAndDate2}</h4>
-				<p class="elem-text">{details2}</p>
+		<div class="full-card">
+			<div class="card-fill margin5 flex">
+				<div class="elem-body">
+					<h3 class="elem-title">{heading2}</h3>
+					<h4 class="elem-place-date">{placeAndDate2}</h4>
+					<p class="elem-text">{details2}</p>
+				</div>
 			</div>
 		</div>
-		<div class="card-fill margin5 flex">
-			<div class="elem-body">
-				<h3 class="elem-title">{heading3}</h3>
-				<h4 class="elem-place-date">{placeAndDate3}</h4>
-				<p class="elem-text">{details3}</p>
+		<div class="full-card">
+			<div class="card-fill margin5 flex">
+				<div class="elem-body">
+					<h3 class="elem-title">{heading3}</h3>
+					<h4 class="elem-place-date">{placeAndDate3}</h4>
+					<p class="elem-text">{details3}</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -42,7 +48,25 @@
 	.list-cards-section {
 		width: 90%;
 		max-width: 1080px;
-		margin: var(--spacing6) auto;
+		margin: var(--spacing2) auto;
+	}
+	.cards-column {
+		display: block;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.full-card {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+		margin: var(--spacing2) var(--spacing2);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		flex: 1 1 0;
+		border-radius: var(--spacing3);
+		padding: var(--spacing1);
+		align-self: flex-start;
 	}
 	.card-fill {
 		display: flex;

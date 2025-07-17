@@ -113,7 +113,7 @@
 
 <section class="contact-section margin5">
   <div class="container">
-    <h2 class="section-title">Get In Touch</h2>
+    <h2 class="section-title">Get in touch!</h2>
     <p class="section-description">
       I'd love to hear from you! Whether you have a question, want to discuss a project, or just want to say hello, feel free to reach out.
     </p>
@@ -231,27 +231,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing6) var(--spacing5);
+    padding: var(--spacing3) var(--spacing3);
     background: var(--bg-color);
   }
 
   .container {
     max-width: 800px;
     width: 100%;
-    text-align: center;
   }
 
   .section-title {
     font: var(--h2);
     color: var(--text-color);
-    margin-bottom: var(--spacing3);
+    margin-bottom: var(--spacing5);
+    text-align: center;
   }
 
   .section-description {
     font: var(--p);
     color: hsl(from var(--text-color) h s calc(l - 15));
     margin-bottom: var(--spacing6);
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -259,7 +259,7 @@
   .contact-form {
     text-align: left;
     background: hsl(from var(--bg-color) h s calc(l + 1));
-    padding: var(--spacing6);
+    padding:var(--spacing6);
     border-radius: var(--spacing3);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
