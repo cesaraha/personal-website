@@ -1,6 +1,9 @@
 <script lang="ts">
     import { onMount, onDestroy } from 'svelte';
     import { currentLanguage } from '../stores/language.js';
+    import { getTranslation } from '../lib/translations.js';
+
+	$: t = getTranslation($currentLanguage).navigation;
     
     let hamOpen = false;
     let navRef: HTMLElement | null = null;
@@ -66,9 +69,9 @@
             <img src={hamOpen ? 'img/xmark-solid.svg' : 'img/bars-solid.svg'} alt="" />
         </button>
         <nav class:show={hamOpen} bind:this={navRef}>
-            <a href={'#About'}>About me</a>
-            <a href={'#Projects'}>Projects</a>
-            <a href={'#Contact'}>Contact</a>
+            <a href={'#About'}>{t.about}</a>
+            <a href={'#Projects'}>{t.projects}</a>
+            <a href={'#Contact'}>{t.contact}</a>
         </nav>
     </div>
     
@@ -186,12 +189,12 @@
     .flag-button:focus {
         transform: scale(1.1);
         outline: 2px solid var(--accent-color, #0066cc);
-        outline-offset: 2px;
+        outline-offset: 1px;
     }
     
     .flag-button.active {
-        transform: scale(1.1);
-        filter: brightness(1.2);
+        transform: scale(1.3);
+        filter: brightness(1.3);
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     }
     

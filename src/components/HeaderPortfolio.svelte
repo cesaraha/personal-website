@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import { currentLanguage } from '../stores/language.js';
+    import { getTranslation } from '../lib/translations.js';
+
+	$: t = getTranslation($currentLanguage).navigation;
 
 	let hamOpen = false;
 	let navRef: HTMLElement | null = null;
@@ -65,10 +68,10 @@
 			<img src={hamOpen ? 'img/xmark-solid.svg' : 'img/bars-solid.svg'} alt="" />
 		</button>
 		<nav class:show={hamOpen} bind:this={navRef}>
-			<a href={'#About'}>About me</a>
-			<a href={'#Background'}>Background</a>
-			<a href={'#Experiences'}>Experiences</a>
-			<a href={'#Projects'}>Projects</a>
+			<a href={'#About'}>{t.about}</a>
+			<a href={'#Background'}>{t.background}</a>
+			<a href={'#Experiences'}>{t.experience}</a>
+			<a href={'#Projects'}>{t.projects}</a>
 		</nav>
 	</div>
     <div class="language-selection">

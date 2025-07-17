@@ -10,6 +10,13 @@ export const translations = {
             portfolio: "Portfolio",
             freelance: "Freelance services"
         },
+        navigation: {
+            about: "About me",
+            background: "Background",
+            experience: "Professional experience",
+            projects: "Projects",
+            contact: "Contact"
+        },
         freelance: {
             title: "Freelance services",
             heroFirstLine: "YOU THINK ABOUT IT",
@@ -104,6 +111,13 @@ export const translations = {
             portfolio: "Portfolio",
             freelance: "Services de freelance"
         },
+        navigation: {
+            about: "À propos de moi",
+            background: "Parcours",
+            experience: "Expérience professionnelle",
+            projects: "Projets",
+            contact: "Contact"
+        },
         freelance: {
             title: "Services freelance",
             heroFirstLine: "VOUS Y PENSEZ",
@@ -197,6 +211,13 @@ export const translations = {
             question: "¿Qué estás buscando?",
             portfolio: "Portafolio",
             freelance: "Servicios de freelance"
+        },
+        navigation: {
+            about: "Acerca de mí",
+            background: "Formación",
+            experience: "Experiencia profesional",
+            projects: "Projectos",
+            contact: "Contacto"
         },
         freelance: {
             title: "Services freelance",
