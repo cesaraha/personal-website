@@ -24,7 +24,7 @@ export const translations = {
             heroCtaText: "Get in Touch",
             aboutName: "César Hernandez",
             aboutTitle: "A bit about me",
-            aboutParagraph1: "I am a doctor in Medical Engineering, with experience in R&D projects related to optical imaging, image processing and Deep Learning. I started Web development as a side hustle but it's becoming more of a reality.",
+            aboutParagraph1: "I am a doctor in Medical Engineering, with experience in R&D projects related to optical imaging, image processing and Deep Learning. As a side hustle, I do web development.",
             aboutParagraph2: "In my research, I'm particularly interested in AI solutions applied to imaging (bonus points if it's medical), combining clean code practices and optimisation. As a web developer, I like to create and design web applications and sites with user-centered design to deliver exceptional digital experiences, always adapted to the client's needs.",
             projectsTitle: "Projects",
             project1: {
@@ -52,7 +52,7 @@ export const translations = {
             title: "Portfolio",
             aboutName: "César Hernandez",
             aboutTitle: "A bit about me",
-            aboutParagraph1: "I am a doctor in Medical Engineering, with experience in R&D projects related to optical imaging, image processing and Deep Learning. I started Web development as a side hustle but it's becoming more of a reality.",
+            aboutParagraph1: "I am a doctor in Medical Engineering, with experience in R&D projects related to optical imaging, image processing and Deep Learning. As a side hustle, I do web development.",
             aboutParagraph2: "In my research, I'm particularly interested in AI solutions applied to imaging (bonus points if it's medical), combining clean code practices and optimisation. As a web developer, I like to create and design web applications and sites with user-centered design to deliver exceptional digital experiences, always adapted to the client's needs.",
             backgroundTitle: "Studies",
             background1: {
@@ -124,8 +124,8 @@ export const translations = {
             heroSecondLine: "JE FAIS LE RESTE",
             heroCtaText: "Contactez-moi",
             aboutName: "César Hernandez",
-            aboutTitle: "Un peu sur moi",
-            aboutParagraph1: "Je suis docteur en Ingénierie Médicale, avec une expérience dans les projets de R&D liés à l'imagerie optique, au traitement d'images et au Deep Learning. J'ai commencé le développement Web comme activité secondaire, mais cela devient de plus en plus une réalité.",
+            aboutTitle: "À propos de moi",
+            aboutParagraph1: "Je suis docteur en Ingénierie Médicale, avec une expérience dans les projets de R&D liés à l'imagerie optique, au traitement d'images et au Deep Learning. Également, je fait du développement Web comme activité secondaire.",
             aboutParagraph2: "Dans ma recherche, je m'intéresse particulièrement aux solutions d'IA appliquées à l'imagerie (bonus si c'est médical), en combinant des pratiques de code propre et d'optimisation. En tant que développeur web, j'aime créer et concevoir des applications et sites web avec un design centré sur l'utilisateur pour offrir des expériences numériques exceptionnelles, toujours adaptées aux besoins du client.",
             projectsTitle: "Projets",
             project1: {
@@ -152,8 +152,8 @@ export const translations = {
         portfolio: {
             title: "Portfolio",
             aboutName: "César Hernandez",
-            aboutTitle: "Un peu sur moi",
-            aboutParagraph1: "Je suis docteur en Ingénierie Médicale, avec une expérience dans les projets de R&D liés à l'imagerie optique, au traitement d'images et au Deep Learning. J'ai commencé le développement Web comme activité secondaire, mais cela devient de plus en plus une réalité.",
+            aboutTitle: "À propos de moi",
+            aboutParagraph1: "Je suis docteur en Ingénierie Médicale, avec une expérience dans les projets de R&D liés à l'imagerie optique, au traitement d'images et au Deep Learning. Également, je fait du développement Web comme activité secondaire.",
             aboutParagraph2: "Dans ma recherche, je m'intéresse particulièrement aux solutions d'IA appliquées à l'imagerie (bonus si c'est médical), en combinant des pratiques de code propre et d'optimisation. En tant que développeur web, j'aime créer et concevoir des applications et sites web avec un design centré sur l'utilisateur pour offrir des expériences numériques exceptionnelles, toujours adaptées aux besoins du client.",
             backgroundTitle: "Formations",
             background1: {
@@ -226,7 +226,7 @@ export const translations = {
             heroCtaText: "Contáctame",
             aboutName: "César Hernandez",
             aboutTitle: "Un poco acerca de mí",
-            aboutParagraph1: "Soy doctor en Ingeniería Médica, con experiencia en proyectos R&D ligados a la imagenología óptica, al procesamiento de imágenes y al aprentizaje profundo (Deep Learning). Comencé el desarrollo web como una actividad secundaria, pero se ha convertido cada vez más en una realidad.",
+            aboutParagraph1: "Soy doctor en Ingeniería Médica, con experiencia en proyectos R&D ligados a la imagenología óptica, al procesamiento de imágenes y al aprentizaje profundo (Deep Learning). Ahora, como actividad secundaria, me dedico al desarrollo web.",
             aboutParagraph2: "En investigación, estoy particularmente interesado en soluciones de IA aplicadas a la imagenología (puntos extra si es médica), combinando buenas prácticas de codage y optimización. Como desarrollador web, me encanta crear y diseñar aplicaciones y sitios web con un diseñocentrado en el usuario para ofrecer experiencias tecnológicas excepcionales, siempre adaptadas a las necesidades del cliente.",
             projectsTitle: "Projectos",
             project1: {
@@ -254,7 +254,7 @@ export const translations = {
             title: "Portfolio",
             aboutName: "César Hernandez",
             aboutTitle: "Un poco acerca de mí",
-            aboutParagraph1: "Soy doctor en Ingeniería Médica, con experiencia en proyectos R&D ligados a la imagenología óptica, al procesamiento de imágenes y al aprentizaje profundo (Deep Learning). Comencé el desarrollo web como una actividad secundaria, pero se ha convertido cada vez más en una realidad.",
+            aboutParagraph1: "Soy doctor en Ingeniería Médica, con experiencia en proyectos R&D ligados a la imagenología óptica, al procesamiento de imágenes y al aprentizaje profundo (Deep Learning). Ahora, como actividad secundaria, me dedico al desarrollo web.",
             aboutParagraph2: "En investigación, estoy particularmente interesado en soluciones de IA aplicadas a la imagenología (puntos extra si es médica), combinando buenas prácticas de codage y optimización. Como desarrollador web, me encanta crear y diseñar aplicaciones y sitios web con un diseñocentrado en el usuario para ofrecer experiencias tecnológicas excepcionales, siempre adaptadas a las necesidades del cliente.",
             backgroundTitle: "Educación",
             background1: {

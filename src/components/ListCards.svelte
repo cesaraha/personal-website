@@ -59,7 +59,7 @@
 		flex-direction: column;
 		width: 100%;
 		height: auto;
-		margin: var(--spacing2) var(--spacing2);
+		margin: 0 var(--spacing2);
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 		flex: 1 1 0;
 		border-radius: var(--spacing3);
