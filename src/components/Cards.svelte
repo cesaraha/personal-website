@@ -208,7 +208,7 @@
 		align-items: flex-start;
     }
     .card-text {
-        font: var(--p-cards);
+        font: var(--p);
         color: hsl(from var(--text-color) h s calc(l - 15));
         line-height: 1.5;
         flex-grow: 1;
