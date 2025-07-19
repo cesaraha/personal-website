@@ -12,10 +12,9 @@
 :root {
   --text-color: hsl(0, 0%, 100%); /* #ffffff */
   --bg-color: hsl(243, 92%, 10%); /* #040231 */
-  --accent-color: hsl(160, 70%, 60%); /* #52e0b1 */
-  /* --ff: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif; */
+  --accent-color: hsl(160, 70%, 60%); /*  #52e0b1 */
+  
   --ff: "Chubbo-Regular", sans-serif;
-  /* --ff2: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; */
   --ff2: "Supreme-Regular", sans-serif;
   --p: 1rem/1.5em var(--ff2);
   --h1: 700 3.8rem/1em var(--ff);
