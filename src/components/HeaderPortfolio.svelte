@@ -55,7 +55,7 @@
 
 <header>
 	<a href={'/'} class="logo-link">
-		<img class="logo" src="img/Caha-logo.png" alt="Caha logo" />
+		<img class="logo" src="img/caha-logo-mint.png" alt="Caha logo" />
 	</a>
 	<div class="center-content">
 		<button
