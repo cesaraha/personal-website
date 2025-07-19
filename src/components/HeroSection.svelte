@@ -54,7 +54,7 @@
     }
    
     .hero-phrase {
-        font-family: "Inter", "SF Pro Display", "Segoe UI", "Roboto", sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 4rem;
         font-weight: 700;
         margin-bottom: var(--spacing5);
