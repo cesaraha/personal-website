@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="card-content">
-                    <h3 class="card-title">{heading}</h3>
+                    <h5 class="card-title">{heading}</h5>
                     <p class="card-text">{details}</p>
                     <a href={'#'} class="btn">View Project</a>
                 </div>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="card-content">
-                    <h3 class="card-title">{heading2}</h3>
+                    <h5 class="card-title">{heading2}</h5>
                     <p class="card-text">{details2}</p>
                     <a href={'#'} class="btn">View Project</a>
                 </div>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="card-content">
-                    <h3 class="card-title">{heading3}</h3>
+                    <h5 class="card-title">{heading3}</h5>
                     <p class="card-text">{details3}</p>
                     <a href={'#'} class="btn">View Project</a>
                 </div>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="card-content">
-                    <h3 class="card-title">{heading4}</h3>
+                    <h5 class="card-title">{heading4}</h5>
                     <p class="card-text">{details4}</p>
                     <a href={'#'} class="btn">View Project</a>
                 </div>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <div class="card-content">
-                    <h3 class="card-title">{heading5}</h3>
+                    <h5 class="card-title">{heading5}</h5>
                     <p class="card-text">{details5}</p>
                     <a href={'#'} class="btn">View Project</a>
                 </div>
@@ -111,7 +111,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: stretch;
-        gap: var(--spacing4);
+        gap: var(--spacing3);
     }
     .card-link-wrapper {
 		display: flex;
@@ -125,7 +125,7 @@
         min-height: 450px;
         background: hsl(from var(--bg-color) h s calc(l + 2));
         border: 1px solid hsl(from var(--accent-color) h s calc(l - 20) / 0.3);
-        border-radius: 25px;
+        border-radius: var(--spacing3);
         transition: all 0.3s ease;
         backdrop-filter: blur(var(--spacing2));
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -149,7 +149,7 @@
     .image-content{
         position: relative;
         row-gap: var(--spacing2);
-        padding: var(--spacing4) 0;
+        padding: var(--spacing2) 0;
     }
     .overlay {
         position: absolute;
@@ -158,7 +158,7 @@
         width: 100%;
         height: 100%;
         background-color: var(--accent-color);
-        border-radius: var(--spacing4) var(--spacing4) 0 var(--spacing4);
+        border-radius: var(--spacing3) var(--spacing3) 0 var(--spacing3);
     }
     .overlay::before,
     .overlay::after {
@@ -171,7 +171,7 @@
         background-color: var(--accent-color);
     }
     .overlay::after {
-        border-radius: 0 var(--spacing4) 0 0;
+        border-radius: 0 var(--spacing3) 0 0;
         background-color: hsl(from var(--bg-color) h s calc(l + 2));
     }
     .card-image {
@@ -180,7 +180,7 @@
         height: 150px;
         border-radius: 50%;
         background-color: var(--accent-color);
-        padding: var(--spacing1);
+        padding: var(--spacing0);
         z-index: 1;
     }
     .card-image .card-img {
@@ -188,32 +188,26 @@
         width: 100%;
         object-fit: cover;
         border-radius: 50%;
-        border: var(--spacing1) solid var(--bg-color);
+        border: var(--spacing0) solid var(--bg-color);
     }
     .card-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: (--spacing3) var(--spacing4) var(--spacing4) var(--spacing4);
+        padding: 0 var(--spacing1) var(--spacing1) var(--spacing1);
         text-align: center;
         flex-grow: 1;
-		height: 250px;
+        height: var(--spacing7);
     }
     .card-title {
-        font: var(--h3, 500 1.2rem var(--ff2));
         color: var(--text-color);
-		margin-bottom: var(--spacing2);
-        margin-top: 0;
-		height: 2em;
 		align-items: flex-start;
     }
     .card-text {
         font: var(--p);
         color: hsl(from var(--text-color) h s calc(l - 15));
-        line-height: 1.5;
         flex-grow: 1;
-        margin: var(--spacing3) var(--spacing1);
-		height: 4.5em;
+        margin: var(--spacing1) var(--spacing1) var(--spacing2) var(--spacing1);
 		display: -webkit-box;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
@@ -221,17 +215,17 @@
     .btn {
         all: unset;
         display: inline-block;
-        margin: 0 0 var(--spacing4) 0;
+        margin: 0 0 var(--spacing3) 0;
         background: var(--accent-color);
-        padding: var(--spacing2) var(--spacing3);
+        padding: var(--spacing1) var(--spacing3);
         color: var(--bg-color);
         border-radius: var(--spacing2);
         font: var(--p);
         cursor: pointer;
         font-weight: 600;
         box-shadow:
-            var(--spacing1) var(--spacing1) 0 hsl(from var(--accent-color) h s calc(l - 20)),
-            var(--spacing2) var(--spacing2) 0 hsl(from var(--bg-color) h s calc(l - 3));
+            var(--spacing0) var(--spacing0) 0 hsl(from var(--accent-color) h s calc(l - 20)),
+            var(--spacing1) var(--spacing1) 0 hsl(from var(--bg-color) h s calc(l - 3));
         transition: all 0.3s ease;
     }
     .btn:hover {
@@ -253,44 +247,36 @@
     @media (max-width: 768px) {
         .card-section {
             padding: var(--spacing5) var(--spacing3);
+            margin-top: var(--spacing6);
         }
-
         .card-group {
             gap: var(--spacing3);
         }
-
         .card {
             min-height: 380px;
         }
-
         .card-image {
             width: 120px;
             height: 120px;
         }
-
         .overlay::before,
         .overlay::after {
             bottom: -35px;
             height: 35px;
             width: 35px;
         }
-
         .image-content {
             padding: 20px 0;
         }
-
         .card-content {
             padding: 15px 20px 20px 20px;
         }
-
         .card-title {
 			font-size: 1.5rem;
 		}
-
 		.card-text {
 			font-size: 0.90rem;
 		}
-
 		.btn {
 			margin-top: var(--spacing4);
             padding: var(--spacing1) var(--spacing2);
@@ -299,11 +285,12 @@
     }
     @media (max-width: 480px) {
         .card-section {
-            padding: var(--spacing4) var(--spacing2);
+            margin: var(--spacing4) auto;
+            padding: 0 var(--spacing2);
         }
 
         .card-group {
-            gap: var(--spacing2);
+            gap: var(--spacing0);
         }
 
         .card {
@@ -323,11 +310,11 @@
         }
 
         .image-content {
-            padding: 15px 0;
+            padding: var(--spacing1) 0;
         }
 
         .card-content {
-            padding: 15px 15px 20px 15px;
+            padding: var(--spacing0) var(--spacing0) var(--spacing2) var(--spacing0);
         }
 
 		.card-title {
@@ -335,7 +322,7 @@
 		}
 
 		.card-text {
-			font-size: 0.85rem;
+			font-size: 0.9rem;
 		}
 
         .card-link-wrapper {
@@ -343,7 +330,7 @@
         }
 
         .btn {
-			margin-top: var(--spacing4);
+			margin-top: var(--spacing1);
             padding: var(--spacing1) var(--spacing2);
             font-size: 0.9rem;
         }
