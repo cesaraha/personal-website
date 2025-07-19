@@ -10,7 +10,7 @@
 </div>
 <div class="construction-container">
 	<span class="overlay"></span>
-	<img src="/img/construction.jpg" class="construction-background" alt="Construction site" />
+	<img src="/img/construction.png" class="construction-background" alt="Construction site" />
 	<div class="text-overlay">
 		<h1 class="name-option blue-text">
 			<span class="line1">{construction_line1}</span>
