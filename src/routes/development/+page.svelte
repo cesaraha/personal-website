@@ -7,7 +7,7 @@
     import { currentLanguage } from '../../stores/language.js';
     import { getTranslation } from '../../lib/translations.js';
 
-	$: t = getTranslation($currentLanguage).freelance;
+	$: t = getTranslation($currentLanguage).development;
 </script>
 
 <svelte:head>
