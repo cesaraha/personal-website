@@ -1,3 +1,6 @@
+@import url('../css/chubbo.css');
+@import url('../css/supreme.css');
+
 /* Reset */
 * {
   margin: 0;
@@ -7,11 +10,13 @@
 
 /* Variables */
 :root {
-  --text-color: hsl(0, 0%, 100%);
-  --bg-color: hsl(243, 92%, 10%);
+  --text-color: hsl(0, 0%, 100%); /* #ffffff */
+  --bg-color: hsl(243, 92%, 10%); /* #040231 */
   --accent-color: hsl(160, 70%, 60%); /* #52e0b1 */
-  --ff: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  --ff2: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  /* --ff: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif; */
+  --ff: "Chubbo-Regular", sans-serif;
+  /* --ff2: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; */
+  --ff2: "Supreme-Regular", sans-serif;
   --p: 1rem/1.5em var(--ff2);
   --h1: 700 3.8rem/1em var(--ff);
   --h2: 600 3rem/1.1em var(--ff);
@@ -19,6 +24,7 @@
   --h4: 600 1.95rem/1.3em var(--ff);
   --h5: 500 1.5625rem/1.4em var(--ff);
   --h6: 400 1.25rem/1.45em var(--ff);
+  --spacing0: 4px;
   --spacing1: 8px;
   --spacing2: 16px;
   --spacing3: 24px;
@@ -42,18 +48,21 @@ h1 {
 }
 h2 {
   font: var(--h2);
-  margin: var(--spacing2) 0;
 }
 h3 {
   font: var(--h3);
-  margin: var(--spacing2) 0;
 }
 h4 {
   font: var(--h4);
-  margin: var(--spacing2) 0;
+}
+h5 {
+  font: var(--h5);
+}
+h6 {
+  font: var(--h6);
 }
 p {
-  margin: var(--spacing2) 0;
+  font: var(--p);
 }
 img {
   width: 100%;
