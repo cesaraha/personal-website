@@ -4,11 +4,15 @@
 
 export const translations = {
     en: {
+        construction: {
+            line1: "Site under",
+            line2: "construction"
+        },
         welcome: {
             title: "Welcome",
-            question: "What are you looking for?",
             portfolio: "Portfolio",
-            freelance: "Freelance services"
+            development: "Development",
+            tutoring: "Tutoring & private classes"
         },
         navigation: {
             about: "About me",
@@ -17,8 +21,8 @@ export const translations = {
             projects: "Projects",
             contact: "Contact"
         },
-        freelance: {
-            title: "Freelance services",
+        development: {
+            title: "Development",
             heroFirstLine: "YOU THINK ABOUT IT",
             heroSecondLine: "I DO THE REST",
             heroCtaText: "Get in Touch",
@@ -104,12 +108,16 @@ export const translations = {
             }
         },
     },
-        fr: {
+    fr: {
+        construction: {
+            line1: "Site en",
+            line2: "construction"
+        },
         welcome: {
             title: "Bienvenue",
-            question: "Qu'est-ce que vous recherchez ?",
             portfolio: "Portfolio",
-            freelance: "Services de freelance"
+            development: "Développement",
+            tutoring: "Soutien scolaire & cours particuliers"
         },
         navigation: {
             about: "À propos de moi",
@@ -118,8 +126,8 @@ export const translations = {
             projects: "Projets",
             contact: "Contact"
         },
-        freelance: {
-            title: "Services freelance",
+        development: {
+            title: "Développement",
             heroFirstLine: "VOUS Y PENSEZ",
             heroSecondLine: "JE FAIS LE RESTE",
             heroCtaText: "Contactez-moi",
@@ -206,11 +214,15 @@ export const translations = {
         },
     },
     sp: {
+        construction: {
+            line1: "Sitio en",
+            line2: "construcción"
+        },
         welcome: {
             title: "Bienvenido(a)",
-            question: "¿Qué estás buscando?",
             portfolio: "Portafolio",
-            freelance: "Servicios de freelance"
+            development: "Desarrollo de aplicaciones",
+            tutoring: "Tutorías y clases privadas"
         },
         navigation: {
             about: "Acerca de mí",
@@ -219,8 +231,8 @@ export const translations = {
             projects: "Projectos",
             contact: "Contacto"
         },
-        freelance: {
-            title: "Services freelance",
+        development: {
+            title: "Desarrollo de aplicaciones",
             heroFirstLine: "TU PIENSAS EN ELLO",
             heroSecondLine: "YO HAGO EL RESTO",
             heroCtaText: "Contáctame",
