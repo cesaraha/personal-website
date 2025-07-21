@@ -1,8 +1,9 @@
 <script>
     export let titleSection;
-    export let heading;
-    export let details;
-    export let img;
+    export let heading1;
+    export let details1;
+    export let img1;
+    export let ref1;
     export let heading2;
     export let details2;
     export let img2;
@@ -15,28 +16,31 @@
 	export let heading5;
 	export let details5;
 	export let img5;
+    export let heading6;
+	export let details6;
+	export let img6;
 </script>
 
-<div class="card-section">
-    <h1>{titleSection}</h1>
-    <div class="card-group margin4 flex">
+<div class="card-section margin-section test-bg-section">
+    <h1 class="section-title">{titleSection}</h1>
+    <div class="card-group">
         <div class="card-link-wrapper">
-            <div class="card margin4 flex">
+            <div class="card">
                 <div class="image-content">
                     <span class="overlay"></span>
                     <div class="card-image">
-                        <img src={img} class="card-img" alt="Project" />
+                        <img src={img1} class="card-img" alt="Project" />
                     </div>
                 </div>
                 <div class="card-content">
-                    <h5 class="card-title">{heading}</h5>
-                    <p class="card-text">{details}</p>
-                    <a href={'#'} class="btn">View Project</a>
+                    <h5 class="card-title">{heading1}</h5>
+                    <p class="card-text">{details1}</p>
+                    <a href={ref1} class="btn">View Project</a>
                 </div>
             </div>
         </div>
         <div class="card-link-wrapper">
-            <div class="card margin4 flex">
+            <div class="card">
                 <div class="image-content">
                     <span class="overlay"></span>
                     <div class="card-image">
@@ -51,7 +55,7 @@
             </div>
         </div>
         <div class="card-link-wrapper">
-            <div class="card margin4 flex">
+            <div class="card">
                 <div class="image-content">
                     <span class="overlay"></span>
                     <div class="card-image">
@@ -66,7 +70,7 @@
             </div>
         </div>
         <div class="card-link-wrapper">
-            <div class="card margin4 flex">
+            <div class="card">
                 <div class="image-content">
                     <span class="overlay"></span>
                     <div class="card-image">
@@ -81,7 +85,7 @@
             </div>
         </div>
         <div class="card-link-wrapper">
-            <div class="card margin4 flex">
+            <div class="card">
                 <div class="image-content">
                     <span class="overlay"></span>
                     <div class="card-image">
@@ -95,16 +99,27 @@
                 </div>
             </div>
         </div>
+        <div class="card-link-wrapper">
+            <div class="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src={img6} class="card-img" alt="Project6" />
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h5 class="card-title">{heading6}</h5>
+                    <p class="card-text">{details6}</p>
+                    <a href={'#'} class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <style>
     .card-section {
-        width: 90%;
-		max-width: 1120px;
-        margin: var(--spacing2) auto;
         text-wrap: balance;
-        padding: var(--spacing4) var(--spacing5);
     }
     .card-group {
         display: flex;
@@ -112,6 +127,11 @@
         justify-content: center;
         align-items: stretch;
         gap: var(--spacing3);
+    }
+    .card-group,
+    .card > * {
+        flex: 1;
+        min-width: 250px;
     }
     .card-link-wrapper {
 		display: flex;
@@ -131,6 +151,10 @@
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         overflow: hidden;
         gap: var(--spacing2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     .card:hover {
         transform: scale(1.02);
@@ -231,16 +255,6 @@
     .btn:hover {
         background: hsl(from var(--accent-color) h s calc(l + 10));
         transform: scale(1.05);
-    }
-    .flex {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .flex > * {
-        flex: 1;
-        min-width: 250px;
     }
     
     /* Responsive design */

@@ -50,6 +50,10 @@ export const translations = {
             project5: {
                 heading: "Object detection and tracking with OpenCV",
                 details: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
+            },
+            project6: {
+                heading: "Object detection and tracking with OpenCV",
+                details: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
             }
         },
         portfolio: {
@@ -105,6 +109,10 @@ export const translations = {
             project5: {
                 heading: "Object detection and tracking with OpenCV",
                 details: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
+            },
+            project6: {
+                heading: "Object detection and tracking with OpenCV",
+                details: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
             }
         },
     },
@@ -153,6 +161,10 @@ export const translations = {
                 details: "Développement d'algorithmes de traitement d'images pour la segmentation des cellules dans les images de microscopie à des fins de comptage et de classification."
             },
             project5: {
+                heading: "Détection et suivi d'objets avec OpenCV",
+                details: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
+            },
+            project6: {
                 heading: "Détection et suivi d'objets avec OpenCV",
                 details: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
             }
@@ -210,6 +222,10 @@ export const translations = {
             project5: {
                 heading: "Détection et suivi d'objets avec OpenCV",
                 details: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
+            },
+            project6: {
+                heading: "Détection et suivi d'objets avec OpenCV",
+                details: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
             }
         },
     },
@@ -258,6 +274,10 @@ export const translations = {
                 details: "Desarrollo de algoritmos de procesamiento de imágenes para la segmentación de células en imágenes de microscopio para el conteo y clasificación."
             },
             project5: {
+                heading: "Detección y seguimiento de objetos con OpenCV",
+                details: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
+            },
+            project6: {
                 heading: "Detección y seguimiento de objetos con OpenCV",
                 details: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
             }
@@ -313,6 +333,10 @@ export const translations = {
                 details: "Desarrollo de algoritmos de procesamiento de imágenes para la segmentación de células en imágenes de microscopio para el conteo y clasificación."
             },
             project5: {
+                heading: "Detección y seguimiento de objetos con OpenCV",
+                details: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
+            },
+            project6: {
                 heading: "Detección y seguimiento de objetos con OpenCV",
                 details: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
             }
