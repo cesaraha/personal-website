@@ -10,10 +10,13 @@
 
 /* Variables */
 :root {
-  --text-color: hsl(0, 0%, 100%); /* #ffffff */
-  --bg-color: hsl(243, 92%, 10%); /* #040231 */
-  --accent-color: hsl(160, 70%, 60%); /*  #52e0b1 */
-  
+  --text-color: hsl(0, 0%, 100%);
+  /* #ffffff */
+  --bg-color: hsl(243, 92%, 10%);
+  /* #040231 */
+  --accent-color: hsl(160, 70%, 60%);
+  /*  #52e0b1 */
+
   --ff: "Chubbo-Regular", sans-serif;
   --ff2: "Supreme-Regular", sans-serif;
   --p: 1rem/1.5em var(--ff2);
@@ -37,32 +40,41 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font: var(--p);
   background: var(--bg-color);
   color: var(--text-color);
 }
+
 h1 {
   font: var(--h1);
 }
+
 h2 {
   font: var(--h2);
 }
+
 h3 {
   font: var(--h3);
 }
+
 h4 {
   font: var(--h4);
 }
+
 h5 {
   font: var(--h5);
 }
+
 h6 {
   font: var(--h6);
 }
+
 p {
   font: var(--p);
 }
+
 img {
   width: 100%;
 }
@@ -77,45 +89,73 @@ img {
 .reverse {
   flex-direction: row-reverse;
 }
+/*
+.test-bg-section {
+  background-color: red;
+}
+*/
+.section-title {
+  margin-bottom: var(--spacing5);
+}
+.margin-section {
+  margin: 0 auto var(--spacing6) auto;
+  width: 90%;
+}
+.long-card-text {
+  padding: var(--spacing3);
+}
 .padding1 {
   padding: var(--spacing1) 0;
 }
+
 .padding2 {
   padding: var(--spacing2) 0;
 }
+
 .padding3 {
   padding: var(--spacing3) 0;
 }
+
 .padding4 {
   padding: var(--spacing4) 0;
 }
+
 .padding5 {
   padding: var(--spacing5) 0;
 }
+
 .padding6 {
   padding: var(--spacing6) 0;
 }
+
 .padding7 {
   padding: var(--spacing7) 0;
 }
+
 .margin1 {
   margin: var(--spacing1) auto;
 }
+
 .margin2 {
   margin: var(--spacing2) auto;
 }
+
 .margin3 {
   margin: var(--spacing3) auto;
 }
+
 .margin4 {
   margin: var(--spacing4) auto;
 }
+
 .margin5 {
   margin: var(--spacing5) auto;
 }
+
 .margin6 {
   margin: var(--spacing6) auto;
 }
+
 .margin7 {
   margin: var(--spacing7) auto;
 }
