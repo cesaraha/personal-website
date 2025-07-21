@@ -7,7 +7,7 @@
 	export let profileImage;
 </script>
 
-<section class="about-section">
+<section class="about-section margin-section test-bg-section">
 	<div class="container">
 		<div class="main-content">
 			<div class="profile-image-container">
@@ -15,10 +15,10 @@
 			</div>
 			<div class="content">
 				<h1 class="name">{name}</h1>
-				<h2 class="title">{title}</h2>
+				<h3 class="title">{title}</h3>
 				<div class="description">
-					<p>{paragraph1}</p>
-					<p>{paragraph2}</p>
+					<p class="first-paragraph">{paragraph1}</p>
+					<p class="second-paragraph">{paragraph2}</p>
 				</div>
 			</div>
 		</div>
@@ -30,11 +30,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0 var(--spacing5);
+		margin-top: var(--spacing5);
 	}
 
 	.container {
-		max-width: 1080px;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -46,8 +45,9 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: var(--spacing6);
+		gap: var(--spacing5);
 		width: 100%;
+		padding: var(--spacing3) var(--spacing5);
 	}
 
 	.profile-image-container {
@@ -56,8 +56,8 @@
 	}
 
 	.profile-image {
-		width: 400px;
-		height: 400px;
+		width: 350px;
+		height: 350px;
 		border-radius: 50%;
 		object-fit: cover;
 		border: 4px solid var(--accent-color);
@@ -73,24 +73,23 @@
 	.name {
 		font: var(--h1);
 		color: var(--text-color);
-		margin: var(--spacing6) 0 var(--spacing3) 0;
+		margin-bottom: var(--spacing4);
 		letter-spacing: -0.02em;
 	}
 
 	.title {
-		font: var(--h2);
+		font: var(--h3);
 		color: hsl(from var(--text-color) h s calc(l - 20%));
-		margin: var(--spacing5) 0 var(--spacing3) 0;
+		margin-bottom: var(--spacing3);
 	}
 
-	.description {
-		margin-bottom: var(--spacing6);
+	.first-paragraph {
+		margin-bottom: var(--spacing2);
 	}
 
 	.description p {
 		font: var(--p);
 		color: hsl(from var(--text-color) h s calc(l - 10));
-		margin: var(--spacing2) 0;
 	}
 
 	/* Responsive design */
