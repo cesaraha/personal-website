@@ -56,9 +56,10 @@
 <section id="Projects">
 	<Cards
 		titleSection={t.projectsTitle}
-        heading={t.project1.heading}
-        details={t.project1.details}
-        img="img/numbers-mnist.png"
+        heading1={t.project1.heading}
+        details1={t.project1.details}
+        img1="img/numbers-mnist.png"
+		ref1='#'
         heading2={t.project2.heading}
         details2={t.project2.details}
         img2="img/medical-imaging-segmentation.png"
@@ -71,5 +72,8 @@
         heading5={t.project5.heading}
         details5={t.project5.details}
         img5="img/parking.jpg"
+		heading6={t.project6.heading}
+        details6={t.project6.details}
+        img6="img/parking.jpg"
 	/>
 </section>
