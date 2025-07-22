@@ -1,38 +1,72 @@
-# sv
+# c-aha.com Portfolio Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This repository contains the source code for [c-aha.com](https://c-aha.com), a **personal portfolio and freelance services website** built with **Svelte**.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Landing page** with navigation to:
+  - Personal portfolio (projects, background, experience)
+  - Freelance development services
+  - Tutoring and private language classes (Math, Physics, Programming, Spanish, English)
+- **Language selector**: French, English, Spanish
+- **Reusable Svelte components**:
+  - Header and navigation
+  - Hero section
+  - About section
+  - Cards (with/without images)
+  - Contact form
+- **Responsive, clean design** for all devices
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Tech Stack
 
-# create a new project in my-app
-npx sv create my-app
-```
+- **Framework**: Svelte
+- **Editor**: Visual Studio Code
+- **Version Control & CI/CD**: GitHub
+- **Hosting**: Netlify (auto-deployment on push)
 
-## Developing
+## Development Setup
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Clone the repository:
 
-```bash
-npm run dev
+   ```bash
+   git clone https://github.com/your-username/c-aha-portfolio.git
+   cd c-aha-portfolio
+   ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+2. Install dependencies:
 
-## Building
+   ```bash
+   npm install
+   ```
 
-To create a production version of your app:
+3. Run the development server:
 
-```bash
-npm run build
-```
+   ```bash
+   npm run dev
+   ```
 
-You can preview the production build with `npm run preview`.
+   Navigate to `http://localhost:5173` (or the port shown in your terminal).
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+4. To build for production:
+
+   ```bash
+   npm run build
+   ```
+
+## Contributing
+
+This repository is primarily personal, but if you find issues or have suggestions, feel free to open an issue or pull request.
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+**Author:** C. Aha\
+For freelance projects or tutoring inquiries, please use the contact form on [c-aha.com](https://c-aha.com) or reach out via LinkedIn.
+
+---
+
+If you would like, I can also prepare a **project thumbnail and badges** to enhance your GitHub project presentation.
+
