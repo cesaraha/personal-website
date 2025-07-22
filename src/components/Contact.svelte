@@ -66,7 +66,7 @@
 		try {
 			// Prepare email template parameters
 			const templateParams = {
-				to_email: 'c.hdez.alvz@gmail.com', // Replace with your Gmail
+				to_email: 'c.aha.contact@gmail.com',
 				subject: `Request - ${formData.service} - ${formData.fullName}`,
 				from_name: formData.fullName,
 				from_email: formData.email,
