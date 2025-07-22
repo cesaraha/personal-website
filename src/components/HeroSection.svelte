@@ -55,8 +55,6 @@
    
     .hero-phrase {
         font-family: "Inter", sans-serif;
-        font-size: 4rem;
-        font-weight: 700;
         margin-bottom: var(--spacing5);
         line-height: 1.2;
         width: 100%;
@@ -66,17 +64,17 @@
     .first-line {
         color: var(--text-color);
         display: block;
-        font-size: 4rem;
+        font-size: 4.2rem;
         text-shadow: 
             2px 2px 4px rgba(0, 0, 0, 0.8),
             4px 4px 8px rgba(0, 0, 0, 0.6),
             0 0 20px rgba(0, 0, 0, 0.4);
     }
-   
+    
     .second-line {
         color: var(--accent-color);
         display: block;
-        font-size: 6rem;
+        font-size: 4rem;
         text-shadow: 
             2px 2px 4px rgba(0, 0, 0, 0.8),
             4px 4px 8px rgba(0, 0, 0, 0.6),
