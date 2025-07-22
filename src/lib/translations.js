@@ -52,8 +52,8 @@ export const translations = {
                 details: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
             },
             project6: {
-                heading: "Object detection and tracking with OpenCV",
-                details: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
+                heading: "Portfolio website using Svelte and Vite",
+                details: "Personal portfolio website built with Svelte in VS Code, deployed via GitHub and automatically updated on Netlify with each commit."
             }
         },
         portfolio: {
@@ -111,8 +111,8 @@ export const translations = {
                 details: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
             },
             project6: {
-                heading: "Object detection and tracking with OpenCV",
-                details: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
+                heading: "Portfolio website using Svelte and Vite",
+                details: "Personal portfolio website built with Svelte in VS Code, deployed via GitHub and automatically updated on Netlify with each commit."
             }
         },
     },
@@ -165,8 +165,8 @@ export const translations = {
                 details: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
             },
             project6: {
-                heading: "Détection et suivi d'objets avec OpenCV",
-                details: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
+                heading: "Site portfolio développé avec Svelte et Vite",
+                details: "Site portfolio personnel développé avec Svelte dans VS Code, déployé via GitHub et mis à jour automatiquement sur Netlify à chaque commit."
             }
         },
         portfolio: {
@@ -224,8 +224,8 @@ export const translations = {
                 details: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
             },
             project6: {
-                heading: "Détection et suivi d'objets avec OpenCV",
-                details: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
+                heading: "Site portfolio développé avec Svelte et Vite",
+                details: "Site portfolio personnel développé avec Svelte dans VS Code, déployé via GitHub et mis à jour automatiquement sur Netlify à chaque commit."
             }
         },
     },
@@ -278,8 +278,8 @@ export const translations = {
                 details: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
             },
             project6: {
-                heading: "Detección y seguimiento de objetos con OpenCV",
-                details: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
+                heading: "Sitio web de portafolio usando Svelte y Vite",
+                details: "Sitio web de portafolio personal desarrollado con Svelte en VS Code, desplegado a través de GitHub y actualizado automáticamente en Netlify con cada commit."
             }
         },
         portfolio: {
@@ -337,8 +337,8 @@ export const translations = {
                 details: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
             },
             project6: {
-                heading: "Detección y seguimiento de objetos con OpenCV",
-                details: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
+                heading: "Sitio web de portafolio usando Svelte y Vite",
+                details: "Sitio web de portafolio personal desarrollado con Svelte en VS Code, desplegado a través de GitHub y actualizado automáticamente en Netlify con cada commit."
             }
         }
     }
