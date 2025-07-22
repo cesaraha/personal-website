@@ -66,7 +66,3 @@ This project is licensed under the **MIT License**.
 **Author:** C. Aha\
 For freelance projects or tutoring inquiries, please use the contact form on [c-aha.com](https://c-aha.com) or reach out via LinkedIn.
 
----
-
-If you would like, I can also prepare a **project thumbnail and badges** to enhance your GitHub project presentation.
-
