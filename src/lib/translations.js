@@ -23,8 +23,8 @@ export const translations = {
         },
         development: {
             title: "Development",
-            heroFirstLine: "YOU THINK ABOUT IT",
-            heroSecondLine: "I DO THE REST",
+            heroFirstLine: "THINK ABOUT IT",
+            heroSecondLine: "I'LL DO THE REST",
             heroCtaText: "Get in Touch",
             aboutName: "César Hernandez",
             aboutTitle: "A bit about me",
@@ -136,8 +136,8 @@ export const translations = {
         },
         development: {
             title: "Développement",
-            heroFirstLine: "VOUS Y PENSEZ",
-            heroSecondLine: "JE FAIS LE RESTE",
+            heroFirstLine: "THINK ABOUT IT",
+            heroSecondLine: "I'LL DO THE REST",
             heroCtaText: "Contactez-moi",
             aboutName: "César Hernandez",
             aboutTitle: "À propos de moi",
@@ -249,8 +249,8 @@ export const translations = {
         },
         development: {
             title: "Desarrollo de aplicaciones",
-            heroFirstLine: "TU PIENSAS EN ELLO",
-            heroSecondLine: "YO HAGO EL RESTO",
+            heroFirstLine: "THINK ABOUT IT",
+            heroSecondLine: "I'LL DO THE REST",
             heroCtaText: "Contáctame",
             aboutName: "César Hernandez",
             aboutTitle: "Un poco acerca de mí",
