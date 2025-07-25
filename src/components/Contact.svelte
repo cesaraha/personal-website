@@ -2,11 +2,40 @@
 	// Import EmailJS (you'll need to install: npm install @emailjs/browser)
 	import emailjs from '@emailjs/browser';
 
+	export let title : string;
+	export let description : string;
+	export let fullNameTag : string;
+	export let phFullName : string;
+	export let emailTag : string;
+	export let phEmail : string;
+	export let phoneTag : string;
+	export let optionalTag : string;
+	export let phPhone : string;
+	export let serviceTag : string;
+	export let option1 : string;
+	export let option2 : string;
+	export let option3 : string;
+	export let option4 : string;
+	export let option5 : string;
+	export let option6 : string;
+	export let specifyTag : string;
+	export let phSpecify : string;
+	export let characters : string;
+	export let messageTag : string;
+	export let phMessage : string;
+	export let buttonAlways : string;
+	export let buttonSending  : string;
+	export let errorField : string;
+	export let errorValidEmail : string;
+	export let errorService : string;
+	export let submitSuccess : string;
+	export let submitError : string;
+
 	let formData = {
 		fullName: '',
 		email: '',
 		phoneNumber: '',
-		service: 'Please select an option...',
+		service: option1,
 		specification: '',
 		message: ''
 	};
@@ -35,21 +64,21 @@
 		};
 
 		if (!formData.fullName.trim()) {
-			errors.fullName = 'Full name is required';
+			errors.fullName = errorField;
 		}
 
 		if (!formData.email.trim()) {
-			errors.email = 'Email is required';
+			errors.email = errorField;
 		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-			errors.email = 'Please enter a valid email address';
+			errors.email = errorValidEmail;
 		}
 
-		if (!formData.service || formData.service === 'Please select an option...') {
-			errors.service = 'Please select a service';
+		if (!formData.service || formData.service === option1) {
+			errors.service = errorService;
 		}
 
 		if (!formData.message.trim()) {
-			errors.message = 'Message is required';
+			errors.message = errorField;
 		}
 
 		return !errors.fullName && !errors.email && !errors.service && !errors.message;
@@ -85,49 +114,61 @@
 			);
 
 			console.log('Email sent successfully:', response);
-			submitMessage = "Message sent successfully! I'll get back to you soon.";
+			submitMessage = submitSuccess;
 
 			// Reset form
 			formData = {
 				fullName: '',
 				email: '',
 				phoneNumber: '',
-				service: 'Please select an option...',
+				service: option1,
 				specification: '',
 				message: ''
 			};
 		} catch (error) {
 			console.error('Failed to send email:', error);
-			submitMessage = 'Sorry, there was an error sending your message. Please try again.';
+			submitMessage = submitError;
 		} finally {
 			isSubmitting = false;
 		}
 	}
 
+	// Store the current option1 to detect language changes
+	let currentOption1 = option1;
+	
+	// Reactive statement to update service when language changes
+	$: if (option1 !== currentOption1) {
+		// Language has changed, reset service to new default
+		if (formData.service === currentOption1) {
+			formData.service = option1;
+		}
+		currentOption1 = option1;
+	}
+
 	// Reactive statement to clear specification when service changes
-	$: if (formData.service === 'Please select an option...' || formData.service === '') {
+	$: if (formData.service === option1 || formData.service === '') {
 		formData.specification = '';
 	}
+
 </script>
 
-<section class="contact-section margin5">
+<section class="contact-section margin-section">
 	<div class="container">
-		<h2 class="section-title">Get in touch!</h2>
+		<h2 class="section-title">{title}</h2>
 		<p class="section-description">
-			I'd love to hear from you! Whether you have a question, want to discuss a project, or just
-			want to say hello, feel free to reach out.
+			{description}
 		</p>
 
 		<form class="contact-form" on:submit={handleSubmit}>
 			<div class="form-group">
-				<label for="fullName" class="form-label">Full Name</label>
+				<label for="fullName" class="form-label">{fullNameTag}</label>
 				<input
 					type="text"
 					id="fullName"
 					class="form-input"
 					class:error={errors.fullName}
 					bind:value={formData.fullName}
-					placeholder="Enter your full name"
+					placeholder={phFullName}
 				/>
 				{#if errors.fullName}
 					<span class="error-message">{errors.fullName}</span>
@@ -135,14 +176,14 @@
 			</div>
 
 			<div class="form-group">
-				<label for="email" class="form-label">Email</label>
+				<label for="email" class="form-label">{emailTag}</label>
 				<input
 					type="email"
 					id="email"
 					class="form-input"
 					class:error={errors.email}
 					bind:value={formData.email}
-					placeholder="Enter your email address"
+					placeholder={phEmail}
 				/>
 				{#if errors.email}
 					<span class="error-message">{errors.email}</span>
@@ -151,62 +192,62 @@
 
 			<div class="form-group">
 				<label for="phoneNumber" class="form-label"
-					>Phone Number <span class="optional">(Optional)</span></label
+					>{phoneTag} <span class="optional">{optionalTag}</span></label
 				>
 				<input
 					type="tel"
 					id="phoneNumber"
 					class="form-input"
 					bind:value={formData.phoneNumber}
-					placeholder="Enter your phone number"
+					placeholder={phPhone}
 				/>
 			</div>
 
 			<div class="form-group">
-				<label for="service" class="form-label">Service</label>
+				<label for="service" class="form-label">{serviceTag}</label>
 				<select
 					id="service"
 					class="form-select"
 					class:error={errors.service}
 					bind:value={formData.service}
 				>
-					<option value="Please select an option...">Please select an option...</option>
-					<option value="R&D projects">R&D projects</option>
-					<option value="App development">App development</option>
-					<option value="Website creation">Website creation</option>
-					<option value="Private classes">Private classes</option>
-					<option value="Other">Other</option>
+					<option value={option1}>{option1}</option>
+					<option value={option2}>{option2}</option>
+					<option value={option3}>{option3}</option>
+					<option value={option4}>{option4}</option>
+					<option value={option5}>{option5}</option>
+					<option value={option6}>{option6}</option>
 				</select>
 				{#if errors.service}
 					<span class="error-message">{errors.service}</span>
 				{/if}
 			</div>
 
-			{#if formData.service && formData.service !== 'Please select an option...'}
+			{#if formData.service && formData.service !== option1}
 				<div class="form-group">
-					<label for="specification" class="form-label">Please specify</label>
+					<label for="specification" class="form-label">{specifyTag}</label>
 					<input
 						type="text"
 						id="specification"
 						class="form-input"
 						bind:value={formData.specification}
-						placeholder="Please provide a general description of your request"
+						placeholder={phSpecify}
 						maxlength="80"
 					/>
 					<div class="character-count">
-						{formData.specification.length}/80 characters
+						{formData.specification.length}/80 {characters}
 					</div>
 				</div>
 			{/if}
 
 			<div class="form-group">
-				<label for="message" class="form-label">Message</label>
+				<label for="message" class="form-label">{messageTag}</label>
 				<textarea
 					id="message"
 					class="form-textarea"
 					class:error={errors.message}
 					bind:value={formData.message}
-					placeholder="Please provide a detailed description of your request"
+					placeholder={phMessage}
 					rows="5"
 				></textarea>
 				{#if errors.message}
@@ -214,8 +255,8 @@
 				{/if}
 			</div>
 
-			<button type="submit" class="submit-btn" disabled={isSubmitting}>
-				{isSubmitting ? 'Sending...' : 'Send Message'}
+			<button type="submit" class="submit-btn mint-btn" disabled={isSubmitting}>
+				<span class="link-mint-btn">{isSubmitting ? buttonSending : buttonAlways}</span>
 			</button>
 
 			{#if submitMessage}
@@ -256,7 +297,7 @@
 	.section-description {
 		font: var(--p);
 		color: hsl(from var(--text-color) h s calc(l - 15));
-		margin-bottom: var(--spacing6);
+		margin-bottom: var(--spacing5);
 		max-width: 800px;
 		margin-left: auto;
 		margin-right: auto;
@@ -265,7 +306,7 @@
 	.contact-form {
 		text-align: left;
 		background: hsl(from var(--bg-color) h s calc(l + 1));
-		padding: var(--spacing6);
+		padding: var(--spacing5);
 		border-radius: var(--spacing3);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		backdrop-filter: blur(10px);
@@ -335,7 +376,7 @@
 
 	.form-textarea {
 		min-height: 120px;
-		font-family: var(--ff);
+		font-family: var(--ff2);
 		line-height: 1.5;
 	}
 
@@ -355,26 +396,8 @@
 
 	.submit-btn {
 		width: 100%;
-		padding: var(--spacing3) var(--spacing5);
-		background: var(--accent-color);
-		color: var(--bg-color);
-		border: none;
-		border-radius: var(--spacing2);
-		font: 500 1.1rem var(--ff2);
-		cursor: pointer;
-		transition: all 0.3s ease;
-		margin-top: var(--spacing3);
-		box-shadow:
-			var(--spacing1) var(--spacing1) 0 hsl(from var(--accent-color) h s calc(l - 20)),
-			var(--spacing2) var(--spacing2) 0 hsl(from var(--bg-color) h s calc(l - 3));
 	}
-
-	.submit-btn:hover {
-		background: hsl(from var(--accent-color) h s calc(l - 10));
-		transform: scale(1.05);
-		box-shadow: 0 8px 24px hsl(from var(--accent-color) h s calc(l - 20) / 0.4);
-	}
-
+		
 	.submit-btn:active {
 		transform: translateY(0);
 	}
