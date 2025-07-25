@@ -1,5 +1,5 @@
-@import url('../css/chubbo.css');
-@import url('../css/supreme.css');
+@import url('../css/tanker.css');
+@import url('../css/outfit.css');
 
 /* Reset */
 * {
@@ -17,8 +17,8 @@
   --accent-color: hsl(160, 70%, 60%);
   /*  #52e0b1 */
 
-  --ff: "Chubbo-Regular", sans-serif;
-  --ff2: "Supreme-Regular", sans-serif;
+  --ff: "Tanker-Regular", sans-serif;
+  --ff2: "Outfit-Regular", sans-serif;
   --p: 1rem/1.5em var(--ff2);
   --h1: 700 3.8rem/1em var(--ff);
   --h2: 600 3rem/1.1em var(--ff);
@@ -80,30 +80,6 @@ img {
 }
 
 /* Utility Classes */
-.center {
-  text-align: center;
-}
-.hidden {
-  display: none;
-}
-.reverse {
-  flex-direction: row-reverse;
-}
-/*
-.test-bg-section {
-  background-color: red;
-}
-*/
-.section-title {
-  margin-bottom: var(--spacing5);
-}
-.margin-section {
-  margin: 0 auto var(--spacing6) auto;
-  width: 90%;
-}
-.long-card-text {
-  padding: var(--spacing3);
-}
 .padding1 {
   padding: var(--spacing1) 0;
 }
@@ -158,4 +134,129 @@ img {
 
 .margin7 {
   margin: var(--spacing7) auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/*
+.test-bg-section {
+  background-color: red;
+}
+*/
+.section-title {
+  margin-bottom: var(--spacing5);
+}
+
+.margin-section {
+  margin: var(--spacing6) auto;
+  width: 90%;
+}
+
+.long-card-text {
+  padding: var(--spacing3);
+}
+
+/* Mint button styles */
+
+.mint-btn {
+  display: block;
+  position: relative;
+  border-radius: var(--spacing2);
+  flex: 1 1 0;
+  align-items: center;
+  text-align: center;
+  border: 3px solid var(--text-color);
+  z-index: 1;
+  /* Add proper stacking context */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.link-mint-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--bg-color);
+  background: var(--accent-color);
+  padding: var(--spacing1) var(--spacing2);
+  border-radius: var(--spacing2);
+  border: 3px solid var(--bg-color);
+  font: var(--p);
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.mint-btn:hover {
+  transform: scale(1.05);
+}
+
+.mint-btn:hover .link-mint-btn {
+  background: hsl(from var(--accent-color) h s calc(l - 5));
+}
+
+.mint-btn::before,
+.mint-btn::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: var(--spacing2);
+  padding: 0;
+  z-index: -2;
+  background-color: var(--accent-color);
+  /*
+    background-image: conic-gradient(from var(--angle), transparent, var(--accent-color));
+    animation: 3s spin linear infinite;
+    */
+}
+
+.mint-btn::before {
+  filter: blur(var(--spacing3));
+  opacity: 0.4;
+}
+
+.mint-btn::after {
+  /* Solid background to block the glow from affecting the button */
+  background-color: var(--accent-color);
+  z-index: -1;
+}
+
+.mint-btn-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.mint-btn-disabled .link-mint-btn {
+  background: hsl(from var(--accent-color) h s calc(l - 20));
+}
+
+.mint-btn-disabled:hover {
+  transform: none;
+}
+
+.mint-btn-disabled:hover .link-mint-btn {
+  background: hsl(from var(--accent-color) h s calc(l - 20));
+}
+
+.mint-btn-disabled::before,
+.mint-btn-disabled::after {
+  background-color: hsl(from var(--accent-color) h s calc(l - 20));
 }
