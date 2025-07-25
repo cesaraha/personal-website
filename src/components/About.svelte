@@ -7,7 +7,7 @@
 	export let profileImage;
 </script>
 
-<section class="about-section margin-section test-bg-section">
+<section class="about-section margin-section">
 	<div class="container">
 		<div class="main-content">
 			<div class="profile-image-container">
