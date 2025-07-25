@@ -1,38 +1,84 @@
-<script>
+<script lang="ts">
 	export let titleSection;
 	export let heading1;
 	export let details1;
+	export let fullDescription1;
 	export let img1;
 	export let ref1;
 	export let isDisabled1;
 	export let heading2;
 	export let details2;
+	export let fullDescription2;
 	export let img2;
-    export let ref2;
+	export let ref2;
 	export let isDisabled2;
 	export let heading3;
 	export let details3;
+	export let fullDescription3;
 	export let img3;
-    export let ref3;
+	export let ref3;
 	export let isDisabled3;
 	export let heading4;
 	export let details4;
+	export let fullDescription4;
 	export let img4;
-    export let ref4;
+	export let ref4;
 	export let isDisabled4;
 	export let heading5;
 	export let details5;
+	export let fullDescription5;
 	export let img5;
-    export let ref5;
+	export let ref5;
 	export let isDisabled5;
 	export let heading6;
 	export let details6;
+	export let fullDescription6;
 	export let img6;
-    export let ref6;
+	export let ref6;
 	export let isDisabled6;
+	export let readMore;
+	export let viewOnGithub;
+
+	// Define the project type
+    interface Project {
+        title: string;
+        description: string;
+        image: string;
+    }
+
+	// Modal state
+    let showModal = false;
+    let currentProject: Project | null = null;
+
+    function openModal(project: Project) {
+        currentProject = project;
+        showModal = true;
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeModal() {
+        showModal = false;
+        currentProject = null;
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    function handleKeydown(event: KeyboardEvent) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    }
+
+    function handleOverlayClick(event: MouseEvent) {
+        if (event.target === event.currentTarget) {
+            closeModal();
+        }
+    }
+
 </script>
 
-<div class="card-section margin-section test-bg-section">
+<svelte:window on:keydown={handleKeydown} />
+
+<div class="card-section margin-section">
 	<h1 class="section-title">{titleSection}</h1>
 	<div class="card-group">
 		<div class="card-link-wrapper">
@@ -46,12 +92,28 @@
 				<div class="card-content">
 					<h5 class="card-title">{heading1}</h5>
 					<p class="card-text">{details1}</p>
-					<a
-						href={isDisabled1 ? '#' : ref1}
-						class="btn {isDisabled1 ? 'btn-disabled' : ''}"
-						on:click={isDisabled1 ? (e) => e.preventDefault() : null}
-						aria-disabled={isDisabled1}>View Project</a
-					>
+					<div class="button-group">
+						<button
+							class="mint-btn"
+							on:click={() =>
+								openModal({
+									title: heading1,
+									description: fullDescription1,
+									image: img1
+								})}
+						>
+							<span class="link-mint-btn">{readMore}</span>
+						</button>
+						<a
+							href={isDisabled1 ? '#' : ref1}
+							class="mint-btn {isDisabled1 ? 'mint-btn-disabled' : ''}"
+							on:click={isDisabled1 ? (e) => e.preventDefault() : null}
+							aria-disabled={isDisabled1}
+							target="_blank"
+						>
+							<span class="link-mint-btn">{viewOnGithub}</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -66,12 +128,28 @@
 				<div class="card-content">
 					<h5 class="card-title">{heading2}</h5>
 					<p class="card-text">{details2}</p>
-					<a
-						href={isDisabled2 ? '#' : ref2}
-						class="btn {isDisabled2 ? 'btn-disabled' : ''}"
-						on:click={isDisabled2 ? (e) => e.preventDefault() : null}
-						aria-disabled={isDisabled2}>View Project</a
-					>
+					<div class="button-group">
+						<button
+							class="mint-btn"
+							on:click={() =>
+								openModal({
+									title: heading2,
+									description: fullDescription2,
+									image: img2
+								})}
+						>
+							<span class="link-mint-btn">{readMore}</span>
+						</button>
+						<a
+							href={isDisabled2 ? '#' : ref2}
+							class="mint-btn {isDisabled2 ? 'mint-btn-disabled' : ''}"
+							on:click={isDisabled2 ? (e) => e.preventDefault() : null}
+							aria-disabled={isDisabled2}
+							target="_blank"
+						>
+							<span class="link-mint-btn">{viewOnGithub}</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -86,12 +164,28 @@
 				<div class="card-content">
 					<h5 class="card-title">{heading3}</h5>
 					<p class="card-text">{details3}</p>
-					<a
-						href={isDisabled3 ? '#' : ref3}
-						class="btn {isDisabled3 ? 'btn-disabled' : ''}"
-						on:click={isDisabled3 ? (e) => e.preventDefault() : null}
-						aria-disabled={isDisabled3}>View Project</a
-					>
+					<div class="button-group">
+						<button
+							class="mint-btn"
+							on:click={() =>
+								openModal({
+									title: heading3,
+									description: fullDescription3,
+									image: img3
+								})}
+						>
+							<span class="link-mint-btn">{readMore}</span>
+						</button>
+						<a
+							href={isDisabled3 ? '#' : ref3}
+							class="mint-btn {isDisabled3 ? 'mint-btn-disabled' : ''}"
+							on:click={isDisabled3 ? (e) => e.preventDefault() : null}
+							aria-disabled={isDisabled3}
+							target="_blank"
+						>
+							<span class="link-mint-btn">{viewOnGithub}</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -106,12 +200,28 @@
 				<div class="card-content">
 					<h5 class="card-title">{heading4}</h5>
 					<p class="card-text">{details4}</p>
-					<a
-						href={isDisabled4 ? '#' : ref4}
-						class="btn {isDisabled4 ? 'btn-disabled' : ''}"
-						on:click={isDisabled4 ? (e) => e.preventDefault() : null}
-						aria-disabled={isDisabled4}>View Project</a
-					>
+					<div class="button-group">
+						<button
+							class="mint-btn"
+							on:click={() =>
+								openModal({
+									title: heading4,
+									description: fullDescription4,
+									image: img4
+								})}
+						>
+							<span class="link-mint-btn">{readMore}</span>
+						</button>
+						<a
+							href={isDisabled4 ? '#' : ref4}
+							class="mint-btn {isDisabled4 ? 'mint-btn-disabled' : ''}"
+							on:click={isDisabled4 ? (e) => e.preventDefault() : null}
+							aria-disabled={isDisabled4}
+							target="_blank"
+						>
+							<span class="link-mint-btn">{viewOnGithub}</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -126,12 +236,28 @@
 				<div class="card-content">
 					<h5 class="card-title">{heading5}</h5>
 					<p class="card-text">{details5}</p>
-					<a
-						href={isDisabled5 ? '#' : ref5}
-						class="btn {isDisabled5 ? 'btn-disabled' : ''}"
-						on:click={isDisabled5 ? (e) => e.preventDefault() : null}
-						aria-disabled={isDisabled5}>View Project</a
-					>
+					<div class="button-group">
+						<button
+							class="mint-btn"
+							on:click={() =>
+								openModal({
+									title: heading5,
+									description: fullDescription5,
+									image: img5
+								})}
+						>
+							<span class="link-mint-btn">{readMore}</span>
+						</button>
+						<a
+							href={isDisabled5 ? '#' : ref5}
+							class="mint-btn {isDisabled5 ? 'mint-btn-disabled' : ''}"
+							on:click={isDisabled5 ? (e) => e.preventDefault() : null}
+							aria-disabled={isDisabled5}
+							target="_blank"
+						>
+							<span class="link-mint-btn">{viewOnGithub}</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -146,17 +272,65 @@
 				<div class="card-content">
 					<h5 class="card-title">{heading6}</h5>
 					<p class="card-text">{details6}</p>
-					<a
-						href={isDisabled6 ? '#' : ref6}
-						class="btn {isDisabled6 ? 'btn-disabled' : ''}"
-						on:click={isDisabled6 ? (e) => e.preventDefault() : null}
-						aria-disabled={isDisabled6}>View Project</a
-					>
+					<div class="button-group">
+						<button
+							class="mint-btn"
+							on:click={() =>
+								openModal({
+									title: heading6,
+									description: fullDescription6,
+									image: img6
+								})}
+						>
+							<span class="link-mint-btn">{readMore}</span>
+						</button>
+						<a
+							href={isDisabled6 ? '#' : ref6}
+							class="mint-btn {isDisabled6 ? 'mint-btn-disabled' : ''}"
+							on:click={isDisabled6 ? (e) => e.preventDefault() : null}
+							aria-disabled={isDisabled6}
+							target="_blank"
+						>
+							<span class="link-mint-btn">{viewOnGithub}</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+{#if showModal && currentProject}
+<div 
+  class="modal-overlay" 
+  on:click={handleOverlayClick}
+  on:keydown={handleKeydown}
+  role="dialog" 
+  aria-modal="true"
+  tabindex="-1"
+>
+  <div class="modal-content">
+    <button 
+      class="modal-close" 
+      on:click={closeModal} 
+      aria-label="Close modal"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    
+    <div class="modal-header">
+      <img src={currentProject.image} alt={currentProject.title} class="modal-image" />
+      <h2 class="modal-title">{currentProject.title}</h2>
+    </div>
+    
+    <div class="modal-body">
+      <p class="modal-description">{currentProject.description}</p>
+    </div>
+  </div>
+</div>
+{/if}
 
 <style>
 	.card-section {
@@ -267,6 +441,7 @@
 	.card-title {
 		color: var(--text-color);
 		align-items: flex-start;
+		min-height: 70px;
 	}
 	.card-text {
 		font: var(--p);
@@ -276,53 +451,99 @@
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		text-overflow: ellipsis;
+		min-height: 72px;
 	}
-	.btn {
-		all: unset;
-		display: inline-block;
-		margin: 0 0 var(--spacing3) 0;
-		background: var(--accent-color);
-		padding: var(--spacing1) var(--spacing3);
-		color: var(--bg-color);
-		border-radius: var(--spacing2);
-		font: var(--p);
+
+	.button-group {
+		display: flex;
+		gap: var(--spacing1);
+		width: 100%;
+		margin-bottom: var(--spacing2);
+		padding: 0 var(--spacing1);
+	}
+
+	/* Modal styles */
+	.modal-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.8);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 10000;
+		padding: var(--spacing3);
+	}
+
+	.modal-content {
+		background: var(--bg-color);
+		border-radius: var(--spacing3);
+		max-width: 600px;
+		width: 100%;
+		max-height: 80vh;
+		overflow-y: auto;
+		position: relative;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+		border: 1px solid hsl(from var(--accent-color) h s calc(l - 20) / 0.3);
+	}
+
+	.modal-close {
+		position: absolute;
+		top: var(--spacing3);
+		right: var(--spacing3);
+		background: none;
+		border: none;
+		color: var(--text-color);
 		cursor: pointer;
-		font-weight: 600;
-		box-shadow:
-			var(--spacing0) var(--spacing0) 0 hsl(from var(--accent-color) h s calc(l - 20)),
-			var(--spacing1) var(--spacing1) 0 hsl(from var(--bg-color) h s calc(l - 3));
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
 		transition: all 0.3s ease;
-	}
-	.btn:hover {
-		background: hsl(from var(--accent-color) h s calc(l + 10));
-		transform: scale(1.05);
+		z-index: 1;
 	}
 
-	.btn-disabled {
-		background: hsl(from var(--accent-color) h s calc(l - 20));
-		color: hsl(from var(--bg-color) h s calc(l + 20));
-		cursor: not-allowed;
-		opacity: 0.6;
-		pointer-events: none;
+	.modal-close:hover {
+		background: hsl(from var(--accent-color) h s calc(l - 20) / 0.1);
+		color: var(--accent-color);
 	}
 
-	.btn-disabled:hover {
-		background: hsl(from var(--accent-color) h s calc(l - 20));
-		transform: none;
+	.modal-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: var(--spacing4) var(--spacing4) var(--spacing3) var(--spacing4);
+		text-align: center;
 	}
 
-	/* If using button element */
-	.btn:disabled {
-		background: hsl(from var(--accent-color) h s calc(l - 20));
-		color: hsl(from var(--bg-color) h s calc(l + 20));
-		cursor: not-allowed;
-		opacity: 0.6;
-		pointer-events: none;
+	.modal-image {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		object-fit: cover;
+		margin-bottom: var(--spacing3);
+		border: 4px solid var(--accent-color);
 	}
 
-	.btn:disabled:hover {
-		background: hsl(from var(--accent-color) h s calc(l - 20));
-		transform: none;
+	.modal-title {
+		color: var(--text-color);
+		margin: 0;
+		font-size: 1.8rem;
+	}
+
+	.modal-body {
+		padding: 0 var(--spacing4) var(--spacing4) var(--spacing4);
+	}
+
+	.modal-description {
+		color: var(--text-color);
+		line-height: 1.6;
+		font: var(--p);
+		margin: 0;
 	}
 
 	/* Responsive design */
@@ -358,11 +579,6 @@
 		}
 		.card-text {
 			font-size: 0.9rem;
-		}
-		.btn {
-			margin-top: var(--spacing4);
-			padding: var(--spacing1) var(--spacing2);
-			font-size: 0.8rem;
 		}
 	}
 	@media (max-width: 480px) {
@@ -409,12 +625,6 @@
 
 		.card-link-wrapper {
 			flex: 1 1 280px;
-		}
-
-		.btn {
-			margin-top: var(--spacing1);
-			padding: var(--spacing1) var(--spacing2);
-			font-size: 0.9rem;
 		}
 	}
 </style>
