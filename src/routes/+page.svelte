@@ -171,4 +171,3 @@
 		submitError={t.contact.submit.error}
 	/>
 </section>
-<FooterExample />
