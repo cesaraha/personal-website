@@ -53,7 +53,6 @@
 	import About from '../components/About.svelte';
 	import Contact from '../components/Contact.svelte';
 	import GridSectioned from '../components/GridSectioned.svelte';
-	import FooterExample from '../components/FooterExample.svelte';
 	import { currentLanguage } from '../stores/language.js';
 	import { getTranslation } from '../lib/translations.js';
 
