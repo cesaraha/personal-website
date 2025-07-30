@@ -36,6 +36,12 @@
 	export let img6;
 	export let ref6;
 	export let isDisabled6;
+	export let heading7;
+	export let details7;
+	export let fullDescription7;
+	export let img7;
+	export let ref7;
+	export let isDisabled7;
 	export let readMore;
 	export let viewOnGithub;
 
@@ -289,6 +295,42 @@
 							class="mint-btn {isDisabled6 ? 'mint-btn-disabled' : ''}"
 							on:click={isDisabled6 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled6}
+							target="_blank"
+						>
+							<span class="link-mint-btn">{viewOnGithub}</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-link-wrapper">
+			<div class="card">
+				<div class="image-content">
+					<span class="overlay"></span>
+					<div class="card-image">
+						<img src={img7} class="card-img" alt="Project7" />
+					</div>
+				</div>
+				<div class="card-content">
+					<h5 class="card-title">{heading7}</h5>
+					<p class="card-text">{details7}</p>
+					<div class="button-group">
+						<button
+							class="mint-btn"
+							on:click={() =>
+								openModal({
+									title: heading7,
+									description: fullDescription7,
+									image: img7
+								})}
+						>
+							<span class="link-mint-btn">{readMore}</span>
+						</button>
+						<a
+							href={isDisabled7 ? '#' : ref7}
+							class="mint-btn {isDisabled7 ? 'mint-btn-disabled' : ''}"
+							on:click={isDisabled7 ? (e) => e.preventDefault() : null}
+							aria-disabled={isDisabled7}
 							target="_blank"
 						>
 							<span class="link-mint-btn">{viewOnGithub}</span>

@@ -18,6 +18,8 @@
 	import NetlifyIcon from '$lib/icons/NetlifyIcon.svelte';
 	import DjangoIcon from '$lib/icons/DjangoIcon.svelte';
 	import SvelteIcon from '$lib/icons/SvelteIcon.svelte';
+	import FastApiIcon from '$lib/icons/FastAPIIcon.svelte';
+	import AxiosIcon from '$lib/icons/AxiosIcon.svelte';
 
 	const section1Cards = [
 		{ icon: PythonIcon, title: 'Python' },
@@ -42,7 +44,9 @@
 	];
 	const section4Cards = [
 		{ icon: DjangoIcon, title: 'Django' },
+		{ icon: FastApiIcon, title: 'FastAPI'},
 		{ icon: SvelteIcon, title: 'Svelte' },
+		{ icon: AxiosIcon, title: 'Axios'},
 		{ icon: GitHubIcon, title: 'GitHub' },
 		{ icon: NetlifyIcon, title: 'Netlify' }
 	];
@@ -115,9 +119,9 @@
 		heading3={t.projects.project3.heading}
 		details3={t.projects.project3.details}
 		fullDescription3={t.projects.project3.description}
-		img3="img/medical-imaging-segmentation.png"
-		ref3="#"
-		isDisabled3={true}
+		img3="img/arithmetics.png"
+		ref3="https://github.com/CesarHdezAlvz/math-generator-ai"
+		isDisabled3={false}
 		heading4={t.projects.project4.heading}
 		details4={t.projects.project4.details}
 		fullDescription4={t.projects.project4.description}
@@ -136,6 +140,12 @@
 		img6="img/parking.jpg"
 		ref6="#"
 		isDisabled6={true}
+		heading7={t.projects.project7.heading}
+		details7={t.projects.project7.details}
+		fullDescription7={t.projects.project7.description}
+		img7="img/medical-imaging-segmentation.png"
+		ref7="#"
+		isDisabled7={true}
 	/>
 </section>
 <section id="Contact">
