@@ -71,9 +71,9 @@ export const translations = {
                 description: "Personal portfolio website built with Svelte in VS Code, deployed via GitHub and automatically updated on Netlify with each commit."
             },
             project3: {
-                heading: "Medical imaging segmentation",
-                details: "Visualization, exploration and segmentation of MRI slices",
-                description: "Development of applications for the display, exploration and segmentation of MRI slices in four different modalities."
+                heading: "AI math generator",
+                details: "Platform for practicing mathematical operations with performance tracker and adaptive exercises",
+                description: "App designed for the personalised experience of the student, based on level, time of reflexion and recurrent mistakes. Engine: Python - Backend: FastAPI - Frontend: Svelte"
             },
             project4: {
                 heading: "OCR for scanned documents and images",
@@ -89,6 +89,11 @@ export const translations = {
                 heading: "Object detection and tracking with OpenCV",
                 details: "Detection and tracking of objects in video data by using OpenCV and Python",
                 description: "Development of applications for the detection and tracking of objects using OpenCV and Python. Trained with YOLOv5 and YOLOv8 models."
+            },
+            project7: {
+                heading: "Medical imaging segmentation",
+                details: "Visualization, exploration and segmentation of MRI slices",
+                description: "Development of applications for the display, exploration and segmentation of MRI slices in four different modalities."
             }
         },
         readMore: "Read more",
@@ -204,9 +209,9 @@ export const translations = {
                 description: "Site portfolio personnel développé avec Svelte dans VS Code, déployé via GitHub et mis à jour automatiquement sur Netlify à chaque commit."
             },
             project3: {
-                heading: "Segmentation d'images médicales",
-                details: "Visualisation, exploration et segmentation de coupes d'IRM",
-                description: "Développement d'applications pour l'affichage, l'exploration et la segmentation de coupes IRM dans quatre modalités différentes."
+                heading: "Generateur IA d'exercices mathematiques",
+                details: "Plateforme de génération de contenu mathématique, avec suivi des performances et exercices adaptatifs.",
+                description: "Application conçue pour une expérience personnalisée de l’élève, basée sur son niveau, son temps de réflexion et ses erreurs récurrentes. Moteur : Python - Backend : FastAPI - Frontend : Svelte"
             },
             project4: {
                 heading: "OCR pour documents scannés et images",
@@ -222,6 +227,11 @@ export const translations = {
                 heading: "Détection et suivi d'objets avec OpenCV",
                 details: "Détection et suivi d'objets dans des vidéos à l'aide d'OpenCV et de Python",
                 description: "Développement d'applications pour la détection et le suivi d'objets en utilisant OpenCV et Python. Entraîné avec les modèles YOLOv5 et YOLOv8."
+            },
+            project7: {
+                heading: "Segmentation d'images médicales",
+                details: "Visualisation, exploration et segmentation de coupes d'IRM",
+                description: "Développement d'applications pour l'affichage, l'exploration et la segmentation de coupes IRM dans quatre modalités différentes."
             }
         },
         readMore: "Afficher plus",
@@ -337,9 +347,9 @@ export const translations = {
                 description: "Sitio web de portafolio personal desarrollado con Svelte en VS Code, desplegado a través de GitHub y actualizado automáticamente en Netlify con cada commit."
             },
             project3: {
-                heading: "Segmentación de imágenes médicas",
-                details: "Visualización, exploración y segmentación de cortes de RM",
-                description: "Desarrollo de aplicaciones para la visualización, exploración y segmentación de cortes de IRM en cuatro modalidades diferentes."
+                heading: "Generador IA de operaciones matemáticas",
+                details: "Plataforma para practicar operaciones matemáticas con seguimiento del rendimiento y ejercicios adaptativos",
+                description: "Aplicación diseñada para una experiencia personalizada del estudiante, basada en su nivel, tiempo de reflexión y errores recurrentes. Motor: Python - Backend: FastAPI - Frontend: Svelte"
             },
             project4: {
                 heading: "OCR en documentos escaneados e imágenes",
@@ -355,6 +365,11 @@ export const translations = {
                 heading: "Detección y seguimiento de objetos con OpenCV",
                 details: "Detección y seguimiento de objetos en archivos de video utilizando OpenCV y Python",
                 description: "Desarrollo de aplicaciones para la detección y el seguimiento de objetos con OpenCV y Python. Entrenamiento con modelos YOLOv5 y YOLOv8."
+            },
+            project7: {
+                heading: "Segmentación de imágenes médicas",
+                details: "Visualización, exploración y segmentación de cortes de RM",
+                description: "Desarrollo de aplicaciones para la visualización, exploración y segmentación de cortes de IRM en cuatro modalidades diferentes."
             }
         },
         readMore: "Ver más",
