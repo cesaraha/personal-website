@@ -50,11 +50,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		padding-left: var(--spacing6);
-        padding-right: var(--spacing6);
+		padding-left: var(--spacing5);
+        padding-right: var(--spacing5);
 	}
 
 	.hero-content {
+		display: block;
 		text-align: left;
 		max-width: none;
 		padding: 0;
@@ -62,7 +63,7 @@
 
 	.hero-phrase {
 		font-family: 'Tanker-Regular', sans-serif;
-		margin-bottom: var(--spacing5);
+		margin-bottom: var(--spacing4);
 		line-height: 1.2;
 		width: 100%;
 		max-width: 800px;
@@ -97,7 +98,7 @@
 	/* Responsive adjustments */
 	@media (max-width: 768px) {
 		.first-line {
-			font-size: 3rem;
+			font-size: 2rem;
 			text-shadow:
 				2px 2px 4px rgba(0, 0, 0, 0.8),
 				3px 3px 6px rgba(0, 0, 0, 0.6),
@@ -105,7 +106,7 @@
 		}
 
 		.second-line {
-			font-size: 4.5rem;
+			font-size: 3rem;
 			text-shadow:
 				2px 2px 4px rgba(0, 0, 0, 0.8),
 				3px 3px 6px rgba(0, 0, 0, 0.6),
@@ -121,7 +122,7 @@
 
 	@media (max-width: 480px) {
 		.first-line {
-			font-size: 2rem;
+			font-size: 1.5rem;
 			text-shadow:
 				1px 1px 2px rgba(0, 0, 0, 0.8),
 				2px 2px 4px rgba(0, 0, 0, 0.6),
@@ -129,7 +130,7 @@
 		}
 
 		.second-line {
-			font-size: 3rem;
+			font-size: 2rem;
 			text-shadow:
 				1px 1px 2px rgba(0, 0, 0, 0.8),
 				2px 2px 4px rgba(0, 0, 0, 0.6),

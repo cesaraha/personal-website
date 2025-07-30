@@ -95,10 +95,13 @@
 	/* Responsive design */
 	@media (max-width: 768px) {
 		.about-section {
-			padding: var(--spacing3);
+			width: 95%;
+			padding: 0;
+			margin-bottom: var(--spacing4);
 		}
 
 		.main-content {
+			width: 100%;
 			flex-direction: column;
 			text-align: center;
 		}
@@ -129,12 +132,17 @@
 	}
 
 	@media (max-width: 480px) {
-    .main-content {
-		gap: var(--spacing3);
-	}
-    .about-section {
-		  padding: var(--spacing4) var(--spacing4) 0 var(--spacing4);
-	  }
+		.about-section {
+			width: 100%;
+			padding: 0;
+			margin: var(--spacing2) auto var(--spacing5) auto;
+		}
+
+		.main-content {
+			gap: var(--spacing4);
+			width: 100%;
+		}
+		
 		.profile-image {
 			width: 220px;
 			height: 220px;
@@ -143,16 +151,16 @@
 		.name {
 			font: var(--h1);
 			font-size: 2rem;
-      margin: var(--spacing0) 0;
+			margin: var(--spacing0) 0;
 		}
 
 		.title {
 			font: var(--h2);
 			font-size: 1.2rem;
-      margin: var(--spacing3) 0 var(--spacing3) 0;
+			margin: var(--spacing3) 0 var(--spacing3) 0;
 		}
 		.description {
-		margin-bottom: 0;
-	}
+			margin-bottom: 0;
+		}
 	}
 </style>
