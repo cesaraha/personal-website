@@ -112,12 +112,12 @@
 						</button>
 						<a
 							href={isDisabled1 ? '#' : ref1}
-							class="blue-btn {isDisabled1 ? 'blue-btn-disabled' : ''}"
+							class="accent-btn {isDisabled1 ? 'accent-btn-disabled' : ''}"
 							on:click={isDisabled1 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled1}
 							target="_blank"
 						>
-							<span class="link-blue-btn">{viewOnGithub}</span>
+							<span class="link-accent-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -148,12 +148,12 @@
 						</button>
 						<a
 							href={isDisabled2 ? '#' : ref2}
-							class="blue-btn {isDisabled2 ? 'blue-btn-disabled' : ''}"
+							class="accent-btn {isDisabled2 ? 'accent-btn-disabled' : ''}"
 							on:click={isDisabled2 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled2}
 							target="_blank"
 						>
-							<span class="link-blue-btn">{viewOnGithub}</span>
+							<span class="link-accent-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -184,12 +184,12 @@
 						</button>
 						<a
 							href={isDisabled3 ? '#' : ref3}
-							class="blue-btn {isDisabled3 ? 'blue-btn-disabled' : ''}"
+							class="accent-btn {isDisabled3 ? 'accent-btn-disabled' : ''}"
 							on:click={isDisabled3 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled3}
 							target="_blank"
 						>
-							<span class="link-blue-btn">{viewOnGithub}</span>
+							<span class="link-accent-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -220,12 +220,12 @@
 						</button>
 						<a
 							href={isDisabled4 ? '#' : ref4}
-							class="blue-btn {isDisabled4 ? 'blue-btn-disabled' : ''}"
+							class="accent-btn {isDisabled4 ? 'accent-btn-disabled' : ''}"
 							on:click={isDisabled4 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled4}
 							target="_blank"
 						>
-							<span class="link-blue-btn">{viewOnGithub}</span>
+							<span class="link-accent-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -256,12 +256,12 @@
 						</button>
 						<a
 							href={isDisabled5 ? '#' : ref5}
-							class="blue-btn {isDisabled5 ? 'blue-btn-disabled' : ''}"
+							class="accent-btn {isDisabled5 ? 'accent-btn-disabled' : ''}"
 							on:click={isDisabled5 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled5}
 							target="_blank"
 						>
-							<span class="link-blue-btn">{viewOnGithub}</span>
+							<span class="link-accent-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -292,12 +292,12 @@
 						</button>
 						<a
 							href={isDisabled6 ? '#' : ref6}
-							class="blue-btn {isDisabled6 ? 'blue-btn-disabled' : ''}"
+							class="accent-btn {isDisabled6 ? 'accent-btn-disabled' : ''}"
 							on:click={isDisabled6 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled6}
 							target="_blank"
 						>
-							<span class="link-blue-btn">{viewOnGithub}</span>
+							<span class="link-accent-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -328,12 +328,12 @@
 						</button>
 						<a
 							href={isDisabled7 ? '#' : ref7}
-							class="blue-btn {isDisabled7 ? 'blue-btn-disabled' : ''}"
+							class="accent-btn {isDisabled7 ? 'accent-btn-disabled' : ''}"
 							on:click={isDisabled7 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled7}
 							target="_blank"
 						>
-							<span class="link-blue-btn">{viewOnGithub}</span>
+							<span class="link-accent-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
