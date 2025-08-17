@@ -97,7 +97,7 @@
 		translate: -50% -50%;
 		border-radius: var(--spacing2);
 		z-index: -2;
-		background-color: var(--accent-color);
+		background-color: hsl(from var(--text-color) h s calc(l + 10));
 		/*
 		background-image: conic-gradient(from var(--angle), transparent, var(--accent-color));
 		animation: 3s spin linear infinite;
@@ -130,7 +130,7 @@
 		justify-content: center;
 		padding: var(--spacing1) var(--spacing1);
 
-		background: var(--accent-color);
+		background: var(--text-color);
 		border: 2px solid var(--text-color);
 		border-radius: var(--spacing2);
 

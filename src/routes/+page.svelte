@@ -113,7 +113,7 @@
 		heading2={t.projects.project2.heading}
 		details2={t.projects.project2.details}
 		fullDescription2={t.projects.project2.description}
-		img2="img/caha-logo-mint.png"
+		img2="img/caha-logo-blue.png"
 		ref2="https://github.com/CesarHdezAlvz/my-portfolio-website"
 		isDisabled2={false}
 		heading3={t.projects.project3.heading}

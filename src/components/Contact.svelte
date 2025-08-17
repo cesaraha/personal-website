@@ -255,8 +255,8 @@
 				{/if}
 			</div>
 
-			<button type="submit" class="submit-btn mint-btn" disabled={isSubmitting}>
-				<span class="link-mint-btn">{isSubmitting ? buttonSending : buttonAlways}</span>
+			<button type="submit" class="submit-btn blue-btn" disabled={isSubmitting}>
+				<span class="link-blue-btn">{isSubmitting ? buttonSending : buttonAlways}</span>
 			</button>
 
 			{#if submitMessage}
@@ -279,7 +279,6 @@
 		align-items: center;
 		justify-content: center;
 		padding: var(--spacing3) var(--spacing3);
-		background: var(--bg-color);
 	}
 
 	.container {
@@ -310,7 +309,7 @@
 		border-radius: var(--spacing3);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		backdrop-filter: blur(10px);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 8px 32px hsl(from var(--text-color) h s l / 0.5);
 	}
 
 	.form-group {
@@ -334,9 +333,9 @@
 	.form-textarea,
 	.form-select {
 		width: 100%;
-		padding: var(--spacing3);
-		background: hsl(from var(--bg-color) h s calc(l + 5));
-		border: 2px solid rgba(255, 255, 255, 0.1);
+		padding: var(--spacing2);
+		background: hsl(from var(--bg-color) h s calc(l - 5));
+		border: 2px solid hsl(from var(--text-color) h s l / 0.7);
 		border-radius: var(--spacing2);
 		color: var(--text-color);
 		font: var(--p);
@@ -349,7 +348,7 @@
 	}
 
 	.form-select option {
-		background: hsl(from var(--bg-color) h s calc(l + 5));
+		background: hsl(from var(--bg-color) h s calc(l - 5));
 		color: var(--text-color);
 		padding: var(--spacing2);
 	}
@@ -358,14 +357,14 @@
 	.form-textarea:focus,
 	.form-select:focus {
 		outline: none;
-		border-color: var(--accent-color);
-		box-shadow: 0 0 0 3px hsl(from var(--accent-color) h s calc(l - 10) / 0.2);
-		background: hsl(from var(--bg-color) h s calc(l + 7));
+		border-color: var(--text-color);
+		box-shadow: 0 0 0 1px hsl(from var(--text-color) h s calc(l + 10) / 0.2);
+		background: hsl(from var(--bg-color) h s calc(l - 7));
 	}
 
 	.form-input::placeholder,
 	.form-textarea::placeholder {
-		color: hsl(from var(--text-color) h s calc(l - 35));
+		color: hsl(from var(--text-color) h s l / 0.5);
 	}
 
 	.form-input.error,
@@ -382,7 +381,7 @@
 
 	.character-count {
 		font-size: 0.8em;
-		color: hsl(from var(--text-color) h s calc(l - 25));
+		color: hsl(from var(--text-color) h s calc(l + 5));
 		text-align: right;
 		margin-top: var(--spacing1);
 	}
@@ -442,6 +441,10 @@
 		.contact-form {
 			padding: var(--spacing5);
 		}
+
+		.form-group {
+		margin-bottom: var(--spacing4);
+	}
 
 		.section-title {
 			font-size: 1.8rem;

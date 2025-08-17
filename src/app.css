@@ -10,12 +10,12 @@
 
 /* Variables */
 :root {
-  --text-color: hsl(0, 0%, 100%);
+  --bg-color: hsl(0, 0%, 100%);
   /* #ffffff */
-  --bg-color: hsl(243, 92%, 10%);
+  --text-color: hsl(243, 92%, 10%);
   /* #040231 */
-  --accent-color: hsl(160, 70%, 60%);
-  /*  #52e0b1 */
+  --accent-color: hsl(350, 100%, 55%);
+  /* mint: #52e0b1 */
 
   --ff: "Tanker-Regular", sans-serif;
   --ff2: "Outfit-Regular", sans-serif;
@@ -166,24 +166,53 @@ img {
   padding: var(--spacing3);
 }
 
-/* Mint button styles */
+/* Button styles */
 
-.mint-btn {
+.blue-btn {
   display: block;
   position: relative;
   border-radius: var(--spacing2);
   flex: 1 1 0;
   align-items: center;
   text-align: center;
-  border: 3px solid var(--text-color);
+  border: 2px solid var(--text-color);
   z-index: 1;
   /* Add proper stacking context */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
 }
-
-.link-mint-btn {
+.accent-btn {
+  display: block;
+  position: relative;
+  border-radius: var(--spacing2);
+  flex: 1 1 0;
+  align-items: center;
+  text-align: center;
+  border: 2px solid var(--accent-color);
+  z-index: 1;
+  /* Add proper stacking context */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+.link-blue-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--bg-color);
+  background: var(--text-color);
+  padding: var(--spacing1) var(--spacing2);
+  border-radius: calc(var(--spacing2) - 2px);
+  border: 2px solid var(--bg-color);
+  font: var(--p);
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 1;
+}
+.link-accent-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,24 +221,29 @@ img {
   color: var(--bg-color);
   background: var(--accent-color);
   padding: var(--spacing1) var(--spacing2);
-  border-radius: var(--spacing2);
-  border: 3px solid var(--bg-color);
+  border-radius: calc(var(--spacing2) - 2px);
+  border: 2px solid var(--bg-color);
   font: var(--p);
   font-weight: 700;
   text-decoration: none;
   z-index: 1;
 }
 
-.mint-btn:hover {
+.accent-btn:hover,
+.blue-btn:hover {
   transform: scale(1.05);
 }
 
-.mint-btn:hover .link-mint-btn {
+.accent-btn:hover .link-accent-btn {
   background: hsl(from var(--accent-color) h s calc(l - 5));
 }
 
-.mint-btn::before,
-.mint-btn::after {
+.blue-btn:hover .link-blue-btn {
+  background: hsl(from var(--text-color) h s calc(l - 5));
+}
+
+.accent-btn::before,
+.accent-btn::after {
   content: '';
   position: absolute;
   height: 100%;
@@ -226,37 +260,73 @@ img {
     animation: 3s spin linear infinite;
     */
 }
+.blue-btn::before,
+.blue-btn::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: var(--spacing2);
+  padding: 0;
+  z-index: -2;
+  background-color: var(--text-color);
+  /*
+    background-image: conic-gradient(from var(--angle), transparent, var(--accent-color));
+    animation: 3s spin linear infinite;
+    */
+}
 
-.mint-btn::before {
+.accent-btn::before,
+.blue-btn::before {
   filter: blur(var(--spacing3));
   opacity: 0.4;
 }
 
-.mint-btn::after {
+.accent-btn::after {
   /* Solid background to block the glow from affecting the button */
   background-color: var(--accent-color);
   z-index: -1;
 }
+.blue-btn::after {
+  /* Solid background to block the glow from affecting the button */
+  background-color: var(--text-color);
+  z-index: -1;
+}
 
-.mint-btn-disabled {
+.accent-btn-disabled,
+.blue-btn-disabled {
   cursor: not-allowed;
   opacity: 0.6;
   pointer-events: none;
 }
 
-.mint-btn-disabled .link-mint-btn {
+.accent-btn-disabled .link-accent-btn {
   background: hsl(from var(--accent-color) h s calc(l - 20));
 }
+.blue-btn-disabled .link-blue-btn {
+  background: hsl(from var(--text-color) h s calc(l - 20));
+}
 
-.mint-btn-disabled:hover {
+.accent-btn-disabled:hover,
+.blue-btn-disabled:hover {
   transform: none;
 }
 
-.mint-btn-disabled:hover .link-mint-btn {
+.accent-btn-disabled:hover .link-accent-btn {
   background: hsl(from var(--accent-color) h s calc(l - 20));
 }
+.blue-btn-disabled:hover .link-blue-btn {
+  background: hsl(from var(--text-color) h s calc(l - 20));
+}
 
-.mint-btn-disabled::before,
-.mint-btn-disabled::after {
+.accent-btn-disabled::before,
+.accent-btn-disabled::after {
   background-color: hsl(from var(--accent-color) h s calc(l - 20));
+}
+.blue-btn-disabled::before,
+.blue-btn-disabled::after {
+  background-color: hsl(from var(--text-color) h s calc(l - 20));
 }

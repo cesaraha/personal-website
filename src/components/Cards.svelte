@@ -100,7 +100,7 @@
 					<p class="card-text">{details1}</p>
 					<div class="button-group">
 						<button
-							class="mint-btn"
+							class="blue-btn"
 							on:click={() =>
 								openModal({
 									title: heading1,
@@ -108,16 +108,16 @@
 									image: img1
 								})}
 						>
-							<span class="link-mint-btn">{readMore}</span>
+							<span class="link-blue-btn">{readMore}</span>
 						</button>
 						<a
 							href={isDisabled1 ? '#' : ref1}
-							class="mint-btn {isDisabled1 ? 'mint-btn-disabled' : ''}"
+							class="blue-btn {isDisabled1 ? 'blue-btn-disabled' : ''}"
 							on:click={isDisabled1 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled1}
 							target="_blank"
 						>
-							<span class="link-mint-btn">{viewOnGithub}</span>
+							<span class="link-blue-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -136,7 +136,7 @@
 					<p class="card-text">{details2}</p>
 					<div class="button-group">
 						<button
-							class="mint-btn"
+							class="blue-btn"
 							on:click={() =>
 								openModal({
 									title: heading2,
@@ -144,16 +144,16 @@
 									image: img2
 								})}
 						>
-							<span class="link-mint-btn">{readMore}</span>
+							<span class="link-blue-btn">{readMore}</span>
 						</button>
 						<a
 							href={isDisabled2 ? '#' : ref2}
-							class="mint-btn {isDisabled2 ? 'mint-btn-disabled' : ''}"
+							class="blue-btn {isDisabled2 ? 'blue-btn-disabled' : ''}"
 							on:click={isDisabled2 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled2}
 							target="_blank"
 						>
-							<span class="link-mint-btn">{viewOnGithub}</span>
+							<span class="link-blue-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -172,7 +172,7 @@
 					<p class="card-text">{details3}</p>
 					<div class="button-group">
 						<button
-							class="mint-btn"
+							class="blue-btn"
 							on:click={() =>
 								openModal({
 									title: heading3,
@@ -180,16 +180,16 @@
 									image: img3
 								})}
 						>
-							<span class="link-mint-btn">{readMore}</span>
+							<span class="link-blue-btn">{readMore}</span>
 						</button>
 						<a
 							href={isDisabled3 ? '#' : ref3}
-							class="mint-btn {isDisabled3 ? 'mint-btn-disabled' : ''}"
+							class="blue-btn {isDisabled3 ? 'blue-btn-disabled' : ''}"
 							on:click={isDisabled3 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled3}
 							target="_blank"
 						>
-							<span class="link-mint-btn">{viewOnGithub}</span>
+							<span class="link-blue-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -208,7 +208,7 @@
 					<p class="card-text">{details4}</p>
 					<div class="button-group">
 						<button
-							class="mint-btn"
+							class="blue-btn"
 							on:click={() =>
 								openModal({
 									title: heading4,
@@ -216,16 +216,16 @@
 									image: img4
 								})}
 						>
-							<span class="link-mint-btn">{readMore}</span>
+							<span class="link-blue-btn">{readMore}</span>
 						</button>
 						<a
 							href={isDisabled4 ? '#' : ref4}
-							class="mint-btn {isDisabled4 ? 'mint-btn-disabled' : ''}"
+							class="blue-btn {isDisabled4 ? 'blue-btn-disabled' : ''}"
 							on:click={isDisabled4 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled4}
 							target="_blank"
 						>
-							<span class="link-mint-btn">{viewOnGithub}</span>
+							<span class="link-blue-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -244,7 +244,7 @@
 					<p class="card-text">{details5}</p>
 					<div class="button-group">
 						<button
-							class="mint-btn"
+							class="blue-btn"
 							on:click={() =>
 								openModal({
 									title: heading5,
@@ -252,16 +252,16 @@
 									image: img5
 								})}
 						>
-							<span class="link-mint-btn">{readMore}</span>
+							<span class="link-blue-btn">{readMore}</span>
 						</button>
 						<a
 							href={isDisabled5 ? '#' : ref5}
-							class="mint-btn {isDisabled5 ? 'mint-btn-disabled' : ''}"
+							class="blue-btn {isDisabled5 ? 'blue-btn-disabled' : ''}"
 							on:click={isDisabled5 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled5}
 							target="_blank"
 						>
-							<span class="link-mint-btn">{viewOnGithub}</span>
+							<span class="link-blue-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -280,7 +280,7 @@
 					<p class="card-text">{details6}</p>
 					<div class="button-group">
 						<button
-							class="mint-btn"
+							class="blue-btn"
 							on:click={() =>
 								openModal({
 									title: heading6,
@@ -288,16 +288,16 @@
 									image: img6
 								})}
 						>
-							<span class="link-mint-btn">{readMore}</span>
+							<span class="link-blue-btn">{readMore}</span>
 						</button>
 						<a
 							href={isDisabled6 ? '#' : ref6}
-							class="mint-btn {isDisabled6 ? 'mint-btn-disabled' : ''}"
+							class="blue-btn {isDisabled6 ? 'blue-btn-disabled' : ''}"
 							on:click={isDisabled6 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled6}
 							target="_blank"
 						>
-							<span class="link-mint-btn">{viewOnGithub}</span>
+							<span class="link-blue-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -316,7 +316,7 @@
 					<p class="card-text">{details7}</p>
 					<div class="button-group">
 						<button
-							class="mint-btn"
+							class="blue-btn"
 							on:click={() =>
 								openModal({
 									title: heading7,
@@ -324,16 +324,16 @@
 									image: img7
 								})}
 						>
-							<span class="link-mint-btn">{readMore}</span>
+							<span class="link-blue-btn">{readMore}</span>
 						</button>
 						<a
 							href={isDisabled7 ? '#' : ref7}
-							class="mint-btn {isDisabled7 ? 'mint-btn-disabled' : ''}"
+							class="blue-btn {isDisabled7 ? 'blue-btn-disabled' : ''}"
 							on:click={isDisabled7 ? (e) => e.preventDefault() : null}
 							aria-disabled={isDisabled7}
 							target="_blank"
 						>
-							<span class="link-mint-btn">{viewOnGithub}</span>
+							<span class="link-blue-btn">{viewOnGithub}</span>
 						</a>
 					</div>
 				</div>
@@ -401,7 +401,7 @@
 		width: 100%;
 		min-height: 450px;
 		background: hsl(from var(--bg-color) h s calc(l + 2));
-		border: 1px solid hsl(from var(--accent-color) h s calc(l - 20) / 0.3);
+		border: 1px solid hsl(from var(--text-color) h s calc(l - 20) / 0.3);
 		border-radius: var(--spacing3);
 		transition: all 0.3s ease;
 		backdrop-filter: blur(var(--spacing2));
@@ -416,7 +416,7 @@
 	.card:hover {
 		transform: scale(1.02);
 		background: hsl(from var(--bg-color) h s calc(l + 3));
-		border-color: var(--accent-color);
+		border-color: var(--text-color);
 		box-shadow: 0 var(--spacing2) var(--spacing4) rgba(0, 0, 0, 0.4);
 	}
 	.image-content,
@@ -438,7 +438,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var(--accent-color);
+		background-color: var(--text-color);
 		border-radius: var(--spacing3) var(--spacing3) 0 var(--spacing3);
 	}
 	.overlay::before,
@@ -449,7 +449,7 @@
 		bottom: -40px;
 		height: 40px;
 		width: 40px;
-		background-color: var(--accent-color);
+		background-color: var(--text-color);
 	}
 	.overlay::after {
 		border-radius: 0 var(--spacing3) 0 0;
@@ -528,7 +528,7 @@
 		overflow-y: auto;
 		position: relative;
 		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-		border: 1px solid hsl(from var(--accent-color) h s calc(l - 20) / 0.3);
+		border: 1px solid hsl(from var(--text-color) h s calc(l - 20) / 0.3);
 	}
 
 	.modal-close {
@@ -550,8 +550,8 @@
 	}
 
 	.modal-close:hover {
-		background: hsl(from var(--accent-color) h s calc(l - 20) / 0.1);
-		color: var(--accent-color);
+		background: hsl(from var(--text-color) h s calc(l - 20) / 0.1);
+		color: var(--text-color);
 	}
 
 	.modal-header {
@@ -568,7 +568,7 @@
 		border-radius: 50%;
 		object-fit: cover;
 		margin-bottom: var(--spacing3);
-		border: 4px solid var(--accent-color);
+		border: 4px solid var(--text-color);
 	}
 
 	.modal-title {

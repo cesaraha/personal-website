@@ -55,7 +55,7 @@
 
 <header>
     <a href={'/'} class="logo-link">
-        <img class="logo" src="img/caha-logo-mint.png" alt="Caha logo" />
+        <img class="logo" src="img/caha-logo-blue.png" alt="Caha logo" />
     </a>
     
     <div class="center-content">
@@ -146,8 +146,9 @@
     
     .ham {
         display: none;
-        width: 24px;
-        height: 24px;
+        translate: 0 1px;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
         padding: var(--spacing1);
         background: transparent;
@@ -168,7 +169,7 @@
     .ham img {
         width: 100%;
         height: 100%;
-        filter: none;
+        filter: invert(1);
     }
     
     /* Language selection styles */
