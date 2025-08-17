@@ -60,7 +60,7 @@
 		height: 350px;
 		border-radius: 50%;
 		object-fit: cover;
-		border: 4px solid var(--accent-color);
+		border: 4px solid var(--text-color);
 		box-shadow: 0 8px 32px hsl(from var(--accent-color) h s calc(l - 20%));
 		transition: transform 0.3s ease;
 	}
