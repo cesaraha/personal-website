@@ -14,7 +14,8 @@
   /* #ffffff */
   --text-color: hsl(243, 92%, 10%);
   /* #040231 */
-  --accent-color: hsl(350, 100%, 55%);
+  --accent-color: hsl(15, 85%, 55%);
+  --accent-color-two: hsl(350, 100%, 55%);
   /* mint: #52e0b1 */
 
   --ff: "Tanker-Regular", sans-serif;
