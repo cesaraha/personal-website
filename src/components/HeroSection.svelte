@@ -72,7 +72,8 @@
 	.first-line {
 		color: var(--text-color);
 		display: block;
-		font-size: 2.7rem;
+		margin-bottom: var(--spacing1);
+		font: 700 clamp(2.3rem, calc(3.5vw + 1rem), 3.8rem)/1em var(--ff-primary);
 		text-shadow:
 			2px 2px 4px rgba(255, 255, 255, 0.8),
 			4px 4px 8px rgba(0, 0, 0, 0.6),
@@ -82,7 +83,7 @@
 	.second-line {
 		color: var(--accent-color);
 		display: block;
-		font-size: 4rem;
+		font: 700 clamp(3rem, calc(4.7vw + 1rem), 6rem)/1em var(--ff-primary);
 		text-shadow:
 			2px 2px 4px rgba(0, 0, 0, 0.8),
 			4px 4px 8px rgba(0, 0, 0, 0.6),
@@ -98,7 +99,7 @@
 	/* Responsive adjustments */
 	@media (max-width: 768px) {
 		.first-line {
-			font-size: 2rem;
+			/* font-size: 2rem; */
 			text-shadow:
 				2px 2px 4px rgba(255, 255, 255, 0.8),
 				3px 3px 6px rgba(0, 0, 0, 0.6),
@@ -106,7 +107,7 @@
 		}
 
 		.second-line {
-			font-size: 3rem;
+			/* font-size: 3rem; */
 			text-shadow:
 				2px 2px 4px rgba(0, 0, 0, 0.8),
 				3px 3px 6px rgba(0, 0, 0, 0.6),
@@ -122,7 +123,7 @@
 
 	@media (max-width: 480px) {
 		.first-line {
-			font-size: 1.5rem;
+			/* font-size: 1.5rem; */
 			text-shadow:
 				1px 1px 2px rgba(255, 255, 255, 0.8),
 				2px 2px 4px rgba(0, 0, 0, 0.6),
@@ -130,7 +131,6 @@
 		}
 
 		.second-line {
-			font-size: 2rem;
 			text-shadow:
 				1px 1px 2px rgba(0, 0, 0, 0.8),
 				2px 2px 4px rgba(0, 0, 0, 0.6),
