@@ -122,7 +122,7 @@
         justify-content: space-between;
         position: sticky;
         top: 0;
-        padding: var(--spacing1) var(--spacing5);
+        padding: var(--spacing1) var(--spacing4);
         background: hsl(from var(--bg-color) h s calc(l + 2));
         border-radius: var(--spacing5);
         z-index: 1000;
@@ -208,7 +208,7 @@
         pointer-events: none;
     }
     
-    @media (max-width: 800px) {
+    @media (max-width: 950px) {
         header {
             padding: var(--spacing2) var(--spacing4);
         }
