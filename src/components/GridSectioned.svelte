@@ -162,21 +162,22 @@
 	}
 
 	/* Responsive breakpoints */
-	@media (max-width: 1200px) {
+
+	@media (max-width: 950px) {
 		.container-squares {
 			grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
 		}
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 600px) {
 		.container-squares {
-			grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+			grid-template-columns: repeat(2, 1fr); /* 2 card per row */
 		}
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 468px) {
 		.container-squares {
-			grid-template-columns: 1fr; /* 1 card per row */
+			grid-template-columns: 1fr; /* 2 card per row */
 			gap: 0.75rem;
 		}
 	}
