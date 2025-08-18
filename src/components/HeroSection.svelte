@@ -97,9 +97,8 @@
 	}
 
 	/* Responsive adjustments */
-	@media (max-width: 768px) {
+	@media (max-width: 950px) {
 		.first-line {
-			/* font-size: 2rem; */
 			text-shadow:
 				2px 2px 4px rgba(255, 255, 255, 0.8),
 				3px 3px 6px rgba(0, 0, 0, 0.6),
@@ -107,7 +106,6 @@
 		}
 
 		.second-line {
-			/* font-size: 3rem; */
 			text-shadow:
 				2px 2px 4px rgba(0, 0, 0, 0.8),
 				3px 3px 6px rgba(0, 0, 0, 0.6),
@@ -121,9 +119,8 @@
 		}
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 600px) {
 		.first-line {
-			/* font-size: 1.5rem; */
 			text-shadow:
 				1px 1px 2px rgba(255, 255, 255, 0.8),
 				2px 2px 4px rgba(0, 0, 0, 0.6),
