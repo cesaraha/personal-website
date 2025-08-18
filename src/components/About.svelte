@@ -71,15 +71,10 @@
 	}
 
 	.name {
-		font: var(--h1);
-		color: var(--text-color);
 		margin-bottom: var(--spacing4);
-		letter-spacing: -0.02em;
 	}
 
 	.title {
-		font: var(--h3);
-		color: hsl(from var(--text-color) h s calc(l - 20%));
 		margin-bottom: var(--spacing3);
 	}
 
@@ -88,54 +83,45 @@
 	}
 
 	.description p {
-		font: var(--p);
-		color: hsl(from var(--text-color) h s calc(l - 10));
+		color: hsl(from var(--text-color) h s calc(l - 5));
 	}
 
 	/* Responsive design */
-	@media (max-width: 768px) {
+	@media (max-width: 950px) {
 		.about-section {
-			width: 95%;
+			width: 100%;
 			padding: 0;
 			margin-bottom: var(--spacing4);
 		}
 
 		.main-content {
-			width: 100%;
+			width: 95%;
 			flex-direction: column;
+			text-align: center;
+			padding: 0 calc(var(--spacing4) + var(--spacing2)) var(--spacing5);
+		}
+
+		.name,
+		.title {
 			text-align: center;
 		}
 
-		.content {
-			text-align: center;
+		.description {
+			text-align: left;
+			text-wrap: justify;
 		}
 
 		.profile-image {
-			width: 280px;
-			height: 280px;
-		}
-
-		.name {
-			font: var(--h1);
-			font-size: 2.5rem;
-		}
-
-		.title {
-			font: var(--h2);
-			font-size: 1.3rem;
-		}
-
-		.description p {
-			font: var(--p);
-			font-size: 1rem;
+			width: 270px;
+			height: 270px;
 		}
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 600px) {
 		.about-section {
 			width: 100%;
 			padding: 0;
-			margin: var(--spacing2) auto var(--spacing5) auto;
+			margin: var(--spacing2) 0 var(--spacing5) 0;
 		}
 
 		.main-content {
@@ -149,18 +135,15 @@
 		}
 
 		.name {
-			font: var(--h1);
-			font-size: 2rem;
 			margin: var(--spacing0) 0;
 		}
 
 		.title {
-			font: var(--h2);
-			font-size: 1.2rem;
 			margin: var(--spacing3) 0 var(--spacing3) 0;
 		}
 		.description {
 			margin-bottom: 0;
+			text-wrap: balance;
 		}
 	}
 </style>
