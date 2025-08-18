@@ -297,11 +297,11 @@ export const translations = {
         about: {
             name: "César Hernandez",
             title: "Un poco acerca de mí",
-            paragraph1: "Soy doctor en Ingeniería Médica, con experiencia en proyectos R&D ligados a la imagenología óptica, al procesamiento de imágenes y al aprentizaje profundo (Deep Learning). También me dedico al desarrollo web.",
+            paragraph1: "Soy doctor en Ingeniería Biomédica, con experiencia en proyectos R&D ligados a la imagenología óptica, al procesamiento de imágenes y al aprentizaje profundo (Deep Learning). También me dedico al desarrollo web.",
             paragraph2: "En investigación, estoy particularmente interesado en soluciones de IA aplicadas a la imagenología (puntos extra si es médica), combinando buenas prácticas de codage y optimización. Como desarrollador web, me encanta crear y diseñar aplicaciones y sitios web con un diseñocentrado en el usuario para ofrecer experiencias tecnológicas excepcionales, siempre adaptadas a las necesidades del cliente.",
             studiesTitle: "Educación",
             studies1: {
-                heading: "Licenciatura en Ingeniería Médica",
+                heading: "Licenciatura en Ingeniería Biomédica",
                 placeAndDate: "Sinaloa, México | Sep 2014 - Ene 2018",
                 details: "Enfocada en el desarrollo de prototipos utilizando habilidades de electrónica, mecánica y programación."
             },
