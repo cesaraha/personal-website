@@ -77,12 +77,14 @@
 		margin-bottom: var(--spacing3);
 	}
 	.each-section {
-		padding: var(--spacing3) var(--spacing4);
+		padding: var(--spacing3) min(var(--spacing4), 7%);
 		border: 2px solid var(--text-color);
 		border-radius: var(--spacing2);
-		margin: 0 var(--spacing5) var(--spacing4) var(--spacing5);
+		margin: 0 min(var(--spacing5), 10%) var(--spacing4) min(var(--spacing5), 10%);
 		position: relative;
 		z-index: 1;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.each-section::before,
@@ -116,23 +118,24 @@
 
 	.container-squares {
 		display: grid;
+		grid-auto-rows: fit-content;
 		grid-template-columns: repeat(4, 1fr);
-		gap: var(--spacing4);
+		gap: min(var(--spacing4), 9vw);
+		width: 100%;
 	}
 
 	.card {
-		min-height: 150px;
-		max-height: 200px;
-
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: var(--spacing1) var(--spacing1);
+		padding: var(--spacing2) var(--spacing1);
 
 		background: var(--text-color);
 		border: 2px solid var(--text-color);
 		border-radius: var(--spacing2);
+		box-sizing: border-box;
 
 		transition: all 0.3s ease;
 	}
@@ -143,10 +146,11 @@
 	}
 
 	.card-icon {
-		width: 60px;
-		height: 60px;
-		margin-bottom: 0.75rem;
+		width: clamp(24px, 8vw, 50px);
+    	height: clamp(24px, 8vw, 50px);
+		margin-bottom: var(--spacing2);
 		color: var(--bg-color);
+		flex-shrink: 0;
 	}
 
 	.card-icon :global(svg) {
@@ -156,7 +160,7 @@
 	}
 
 	.card-title {
-		font-size: var(--p);
+		font: clamp(0.45rem, 0.85rem, 1.2rem) / 1.5em var(--ff-secondary);
 		text-align: center;
 		color: var(--bg-color);
 	}
@@ -165,20 +169,29 @@
 
 	@media (max-width: 950px) {
 		.container-squares {
-			grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+			grid-template-columns: repeat(3, 1fr);
+			gap: min(var(--spacing3), 6vw);
 		}
 	}
 
 	@media (max-width: 600px) {
 		.container-squares {
-			grid-template-columns: repeat(2, 1fr); /* 2 card per row */
+			grid-template-columns: repeat(2, 1fr);
+			gap: min(var(--spacing2), 4vw);
+		}
+		.each-section {
+			padding: var(--spacing2) min(var(--spacing3), 5%);
+			margin: 0 min(var(--spacing3), 3vw) var(--spacing3) min(var(--spacing3), 3vw);
 		}
 	}
-
-	@media (max-width: 468px) {
+	@media (max-width: 375px) {
 		.container-squares {
-			grid-template-columns: 1fr; /* 2 card per row */
-			gap: 0.75rem;
+			grid-template-columns: 1fr;
+			gap: var(--spacing2);
+		}
+		.each-section {
+			padding: var(--spacing2);
+			margin: 0 var(--spacing2) var(--spacing3) var(--spacing2);
 		}
 	}
 </style>
