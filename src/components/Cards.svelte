@@ -46,40 +46,39 @@
 	export let viewOnGithub;
 
 	// Define the project type
-    interface Project {
-        title: string;
-        description: string;
-        image: string;
-    }
+	interface Project {
+		title: string;
+		description: string;
+		image: string;
+	}
 
 	// Modal state
-    let showModal = false;
-    let currentProject: Project | null = null;
+	let showModal = false;
+	let currentProject: Project | null = null;
 
-    function openModal(project: Project) {
-        currentProject = project;
-        showModal = true;
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
+	function openModal(project: Project) {
+		currentProject = project;
+		showModal = true;
+		document.body.style.overflow = 'hidden'; // Prevent background scrolling
+	}
 
-    function closeModal() {
-        showModal = false;
-        currentProject = null;
-        document.body.style.overflow = ''; // Restore scrolling
-    }
+	function closeModal() {
+		showModal = false;
+		currentProject = null;
+		document.body.style.overflow = ''; // Restore scrolling
+	}
 
-    function handleKeydown(event: KeyboardEvent) {
-        if (event.key === 'Escape') {
-            closeModal();
-        }
-    }
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape') {
+			closeModal();
+		}
+	}
 
-    function handleOverlayClick(event: MouseEvent) {
-        if (event.target === event.currentTarget) {
-            closeModal();
-        }
-    }
-
+	function handleOverlayClick(event: MouseEvent) {
+		if (event.target === event.currentTarget) {
+			closeModal();
+		}
+	}
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -343,35 +342,43 @@
 </div>
 
 {#if showModal && currentProject}
-<div 
-  class="modal-overlay" 
-  on:click={handleOverlayClick}
-  on:keydown={handleKeydown}
-  role="dialog" 
-  aria-modal="true"
-  tabindex="-1"
->
-  <div class="modal-content">
-    <button 
-      class="modal-close" 
-      on:click={closeModal} 
-      aria-label="Close modal"
-    >
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
-    
-    <div class="modal-header">
-      <img src={currentProject.image} alt={currentProject.title} class="modal-image" />
-      <h2 class="modal-title">{currentProject.title}</h2>
-    </div>
-    
-    <div class="modal-body">
-      <p class="modal-description">{currentProject.description}</p>
-    </div>
-  </div>
-</div>
+	<div
+		class="modal-overlay"
+		on:click={handleOverlayClick}
+		on:keydown={handleKeydown}
+		role="dialog"
+		aria-modal="true"
+		tabindex="-1"
+	>
+		<div class="modal-content">
+			<button class="modal-close" on:click={closeModal} aria-label="Close modal">
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M18 6L6 18M6 6L18 18"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</button>
+
+			<div class="modal-header">
+				<img src={currentProject.image} alt={currentProject.title} class="modal-image" />
+				<h2 class="modal-title">{currentProject.title}</h2>
+			</div>
+
+			<div class="modal-body">
+				<p class="modal-description">{currentProject.description}</p>
+			</div>
+		</div>
+	</div>
 {/if}
 
 <style>
@@ -383,35 +390,36 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: stretch;
-		gap: var(--spacing3);
+		gap: clamp(var(--spacing2), 3vw, var(--spacing3));
 	}
+	
 	.card-group,
 	.card > * {
 		flex: 1;
-		min-width: 250px;
+		width: 100%;
 	}
+
 	.card-link-wrapper {
 		display: flex;
 		text-decoration: none;
 		color: inherit;
-		flex: 1 1 320px;
-		max-width: 320px;
+		flex: 1 1 calc(33% - var(--spacing3));
+		max-width: calc(33% - var(--spacing3));
+		min-width: 280px;
 	}
 	.card {
 		width: 100%;
-		min-height: 450px;
+		min-height: clamp(300px, 40vh, 400px);
 		background: hsl(from var(--bg-color) h s calc(l + 2));
-		border: 1px solid hsl(from var(--text-color) h s calc(l - 20) / 0.3);
-		border-radius: var(--spacing3);
+		border-radius: clamp(var(--spacing2), 2vw, var(--spacing3));
 		transition: all 0.3s ease;
 		backdrop-filter: blur(var(--spacing2));
 		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 		overflow: hidden;
-		gap: var(--spacing2);
+		gap: clamp(var(--spacing1), 2vw, var(--spacing2));
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 	.card:hover {
 		transform: scale(1.02);
@@ -419,18 +427,16 @@
 		border-color: var(--text-color);
 		box-shadow: 0 var(--spacing2) var(--spacing4) rgba(0, 0, 0, 0.4);
 	}
-	.image-content,
-	.card-content {
+
+	.image-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: var(--spacing3) var(--spacing3);
-		z-index: 1000;
-	}
-	.image-content {
 		position: relative;
-		row-gap: var(--spacing2);
-		padding: var(--spacing2) 0;
+		height: clamp(130px, 20vh, 180px);
+		padding: clamp(var(--spacing1), 3vw, var(--spacing2)) 0;
+		z-index: 1000;
+		flex-shrink: 0;
 	}
 	.overlay {
 		position: absolute;
@@ -439,29 +445,31 @@
 		width: 100%;
 		height: 100%;
 		background-color: var(--text-color);
-		border-radius: var(--spacing3) var(--spacing3) 0 var(--spacing3);
+		border-radius: clamp(calc(var(--spacing2) - 1px), calc(2vw - 1px), calc(var(--spacing3) - 1px))
+			clamp(calc(var(--spacing2) - 1px), calc(2vw - 1px), calc(var(--spacing3) - 1px)) 0
+			clamp(calc(var(--spacing2) - 1px), calc(2vw - 1px), calc(var(--spacing3) - 1px));
 	}
 	.overlay::before,
 	.overlay::after {
 		content: '';
 		position: absolute;
 		right: 0;
-		bottom: -40px;
-		height: 40px;
-		width: 40px;
+		bottom: max(-25px, -4vw);
+		height: min(25px, 4vw);
+		width: min(25px, 4vw);
 		background-color: var(--text-color);
 	}
 	.overlay::after {
-		border-radius: 0 var(--spacing3) 0 0;
+		border-radius: 0 clamp(var(--spacing2), 2vw, var(--spacing3)) 0 0;
 		background-color: hsl(from var(--bg-color) h s calc(l + 2));
 	}
 	.card-image {
 		position: relative;
-		width: 150px;
-		height: 150px;
+		width: clamp(100px, 15vw, 150px);
+		height: clamp(100px, 15vw, 150px);
 		border-radius: 50%;
 		background-color: var(--bg-color);
-		padding: 2px;
+		padding: 1px;
 		z-index: 1;
 	}
 	.card-image .card-img {
@@ -475,33 +483,47 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 0 var(--spacing1) var(--spacing1) var(--spacing1);
+		padding: 0 clamp(var(--spacing1), 2vw, var(--spacing2))
+			clamp(var(--spacing2), 3vw, var(--spacing3)) clamp(var(--spacing1), 2vw, var(--spacing2));
 		text-align: center;
 		flex-grow: 1;
-		height: var(--spacing7);
+		width: 100%;
+		box-sizing: border-box;
+		justify-content: space-between;
+		z-index: 1000;
 	}
 	.card-title {
 		color: var(--text-color);
-		align-items: flex-start;
-		min-height: 70px;
+		margin-bottom: clamp(var(--spacing1), 2vw, var(--spacing2));
+		padding: 0;
+		min-height: auto;
+		flex-shrink: 0;
 	}
 	.card-text {
-		font: var(--p);
 		color: hsl(from var(--text-color) h s calc(l - 15));
 		flex-grow: 1;
-		margin: var(--spacing1) var(--spacing1) var(--spacing2) var(--spacing1);
+		margin: 0 clamp(var(--spacing0), 1.25vw, var(--spacing1))
+			clamp(var(--spacing2), 3vw, var(--spacing3)) clamp(var(--spacing0), 1.25vw, var(--spacing1));
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		text-overflow: ellipsis;
-		min-height: 72px;
+		min-height: auto;
+		align-items: flex-start;
 	}
 
 	.button-group {
 		display: flex;
-		gap: var(--spacing1);
+		gap: clamp(var(--spacing1), 2vw, var(--spacing2));
 		width: 100%;
-		margin-bottom: var(--spacing2);
-		padding: 0 var(--spacing1);
+		margin-top: auto;
+		padding: 0;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+	.button-group > * {
+		flex: 1;
+		max-width: 120px;
+		min-width: 80px;
 	}
 
 	/* Modal styles */
@@ -589,64 +611,47 @@
 	}
 
 	/* Responsive design */
-	@media (max-width: 768px) {
+	@media (max-width: 950px) {
 		.card-section {
 			padding: var(--spacing5) var(--spacing3);
 			margin-top: var(--spacing6);
 		}
-		.card-group {
-			gap: var(--spacing3);
+
+		.card-link-wrapper {
+			flex: 1 1 calc(40% - var(--spacing2));
+			max-width: calc(40% - var(--spacing2));
+			min-width: 230px;
 		}
 		.card {
-			min-height: 380px;
-		}
-		.card-image {
-			width: 120px;
-			height: 120px;
-		}
-		.overlay::before,
-		.overlay::after {
-			bottom: -35px;
-			height: 35px;
-			width: 35px;
-		}
-		.image-content {
-			padding: 20px 0;
-		}
-		.card-content {
-			padding: 15px 20px 20px 20px;
+			margin: 0 auto;
 		}
 		.card-title {
-			font-size: 1.5rem;
+			font: 500 clamp(0.65rem, calc(0.1vw + 1rem), 1.95rem)/1.4em var(--ff-primary);
 		}
 		.card-text {
-			font-size: 0.9rem;
+			font: clamp(0.45rem, 0.70rem, 1rem)/1.5em var(--ff-secondary);
+		}
+		.link-blue-btn,
+		.link-accent-btn {
+			font: clamp(0.45rem, 0.75rem, 1rem)/1.5em var(--ff-secondary);
 		}
 	}
-	@media (max-width: 480px) {
+	@media (max-width: 600px) {
 		.card-section {
 			margin: var(--spacing4) auto;
 			padding: 0 var(--spacing2);
 		}
 
 		.card-group {
-			gap: var(--spacing0);
+			gap: var(--spacing2);
 		}
-
+		.card-link-wrapper {
+			flex: 1 1 100%;
+			max-width: 100%;
+			min-width: 240px;
+		}
 		.card {
 			min-height: 360px;
-		}
-
-		.card-image {
-			width: 100px;
-			height: 100px;
-		}
-
-		.overlay::before,
-		.overlay::after {
-			bottom: -30px;
-			height: 30px;
-			width: 30px;
 		}
 
 		.image-content {
@@ -658,15 +663,15 @@
 		}
 
 		.card-title {
-			font-size: 1.5rem;
+			font: 500 clamp(0.65rem, 1.375rem, 1.95rem)/1.4em var(--ff-primary);
+			padding: 0 var(--spacing2);
 		}
-
 		.card-text {
-			font-size: 0.9rem;
+			font: clamp(0.45rem, 0.9rem, 1rem)/1.5em var(--ff-secondary);
 		}
-
-		.card-link-wrapper {
-			flex: 1 1 280px;
+		.link-blue-btn,
+		.link-accent-btn {
+			font: clamp(0.45rem, 0.8rem, 1rem)/1.5em var(--ff-secondary);
 		}
 	}
 </style>
