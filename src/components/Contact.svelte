@@ -2,34 +2,34 @@
 	// Import EmailJS (you'll need to install: npm install @emailjs/browser)
 	import emailjs from '@emailjs/browser';
 
-	export let title : string;
-	export let description : string;
-	export let fullNameTag : string;
-	export let phFullName : string;
-	export let emailTag : string;
-	export let phEmail : string;
-	export let phoneTag : string;
-	export let optionalTag : string;
-	export let phPhone : string;
-	export let serviceTag : string;
-	export let option1 : string;
-	export let option2 : string;
-	export let option3 : string;
-	export let option4 : string;
-	export let option5 : string;
-	export let option6 : string;
-	export let specifyTag : string;
-	export let phSpecify : string;
-	export let characters : string;
-	export let messageTag : string;
-	export let phMessage : string;
-	export let buttonAlways : string;
-	export let buttonSending  : string;
-	export let errorField : string;
-	export let errorValidEmail : string;
-	export let errorService : string;
-	export let submitSuccess : string;
-	export let submitError : string;
+	export let title: string;
+	export let description: string;
+	export let fullNameTag: string;
+	export let phFullName: string;
+	export let emailTag: string;
+	export let phEmail: string;
+	export let phoneTag: string;
+	export let optionalTag: string;
+	export let phPhone: string;
+	export let serviceTag: string;
+	export let option1: string;
+	export let option2: string;
+	export let option3: string;
+	export let option4: string;
+	export let option5: string;
+	export let option6: string;
+	export let specifyTag: string;
+	export let phSpecify: string;
+	export let characters: string;
+	export let messageTag: string;
+	export let phMessage: string;
+	export let buttonAlways: string;
+	export let buttonSending: string;
+	export let errorField: string;
+	export let errorValidEmail: string;
+	export let errorService: string;
+	export let submitSuccess: string;
+	export let submitError: string;
 
 	let formData = {
 		fullName: '',
@@ -135,7 +135,7 @@
 
 	// Store the current option1 to detect language changes
 	let currentOption1 = option1;
-	
+
 	// Reactive statement to update service when language changes
 	$: if (option1 !== currentOption1) {
 		// Language has changed, reset service to new default
@@ -149,7 +149,6 @@
 	$: if (formData.service === option1 || formData.service === '') {
 		formData.specification = '';
 	}
-
 </script>
 
 <section class="contact-section margin-section">
@@ -296,10 +295,9 @@
 	.section-description {
 		font: var(--p);
 		color: hsl(from var(--text-color) h s calc(l - 15));
-		margin-bottom: var(--spacing5);
+		margin: 0 auto var(--spacing5);
 		max-width: 800px;
-		margin-left: auto;
-		margin-right: auto;
+		padding-left: var(--spacing0);
 	}
 
 	.contact-form {
@@ -396,7 +394,7 @@
 	.submit-btn {
 		width: 100%;
 	}
-		
+
 	.submit-btn:active {
 		transform: translateY(0);
 	}
@@ -433,42 +431,32 @@
 	}
 
 	/* Responsive design */
-	@media (max-width: 768px) {
-		.contact-section {
-			padding: var(--spacing5) var(--spacing3);
-		}
+	@media (max-width: 950px) {
 
 		.contact-form {
-			padding: var(--spacing5);
+			padding: var(--spacing4);
 		}
 
 		.form-group {
-		margin-bottom: var(--spacing4);
-	}
-
-		.section-title {
-			font-size: 1.8rem;
-		}
-
-		.section-description {
-			font-size: 0.95rem;
+			margin-bottom: var(--spacing3);
 		}
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 600px) {
 		.contact-section {
-			padding: var(--spacing0) var(--spacing3);
-			margin: var(--spacing0);
+			padding: 0 var(--spacing1);
+			margin: var(--spacing5) auto;
 		}
-		.section-title {
-			font-size: 2.5rem;
-			margin-bottom: var(--spacing4);
-		}
+		.section-title,
 		.section-description {
 			margin-bottom: var(--spacing4);
 		}
+		
 		.contact-form {
 			padding: var(--spacing3);
+		}
+		.form-label {
+			margin-bottom: var(--spacing1);
 		}
 		.form-group {
 			margin-bottom: var(--spacing2);
@@ -476,7 +464,7 @@
 		.form-input,
 		.form-textarea,
 		.form-select {
-			padding: var(--spacing2);
+			padding: var(--spacing1);
 		}
 	}
 </style>
