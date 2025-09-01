@@ -87,7 +87,6 @@
       <h5>Contact</h5>
       <p>Email: c.aha.contact@gmail.com</p>
       <p>Téléphone: +33 6 77 51 42 90</p>
-      <p>Adresse: Paris 13eme arrondissement</p>
     </div>
   </div>
 
