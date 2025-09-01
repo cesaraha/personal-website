@@ -10,8 +10,10 @@
 
 /* Variables */
 :root {
-  --bg-color: hsl(30, 30%, 92%); /* #ffffff */
-  --text-color: hsl(243, 92%, 10%); /* #040231 */
+  --bg-color: hsl(30, 30%, 92%);
+  /* #ffffff */
+  --text-color: hsl(243, 92%, 10%);
+  /* #040231 */
   --accent-color: hsl(15, 85%, 55%);
   --accent-color-two: hsl(350, 100%, 55%);
   /* mint: #52e0b1 */
@@ -166,6 +168,31 @@ img {
   padding: var(--spacing3);
 }
 
+/* Legal page styles */
+.legal-page-section {
+  margin: var(--spacing5) auto;
+  width: 90%;
+}
+
+.legal-page-title {
+  margin-bottom: var(--spacing4);
+}
+
+.legal-page-subtitle {
+  margin: var(--spacing3) 0 var(--spacing1) 0;
+}
+.legal-page-subtitle-two {
+  margin: var(--spacing1) 0 var(--spacing0) 0;
+}
+.legal-page-content {
+  text-align: justify;
+}
+ul.legal-page-content {
+  margin: var(--spacing2) 0 var(--spacing2) 0;
+  padding-left: var(--spacing4);
+  list-style-type: disc;
+}
+
 /* Button styles */
 
 .blue-btn {
@@ -182,6 +209,7 @@ img {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
 }
+
 .accent-btn {
   display: block;
   position: relative;
@@ -196,6 +224,7 @@ img {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
 }
+
 .link-blue-btn {
   display: flex;
   align-items: center;
@@ -212,6 +241,7 @@ img {
   text-decoration: none;
   z-index: 1;
 }
+
 .link-accent-btn {
   display: flex;
   align-items: center;
@@ -260,6 +290,7 @@ img {
     animation: 3s spin linear infinite;
     */
 }
+
 .blue-btn::before,
 .blue-btn::after {
   content: '';
@@ -290,6 +321,7 @@ img {
   background-color: var(--accent-color);
   z-index: -1;
 }
+
 .blue-btn::after {
   /* Solid background to block the glow from affecting the button */
   background-color: var(--text-color);
@@ -306,6 +338,7 @@ img {
 .accent-btn-disabled .link-accent-btn {
   background: hsl(from var(--accent-color) h s calc(l - 20));
 }
+
 .blue-btn-disabled .link-blue-btn {
   background: hsl(from var(--text-color) h s calc(l - 20));
 }
@@ -318,6 +351,7 @@ img {
 .accent-btn-disabled:hover .link-accent-btn {
   background: hsl(from var(--accent-color) h s calc(l - 20));
 }
+
 .blue-btn-disabled:hover .link-blue-btn {
   background: hsl(from var(--text-color) h s calc(l - 20));
 }
@@ -326,6 +360,7 @@ img {
 .accent-btn-disabled::after {
   background-color: hsl(from var(--accent-color) h s calc(l - 20));
 }
+
 .blue-btn-disabled::before,
 .blue-btn-disabled::after {
   background-color: hsl(from var(--text-color) h s calc(l - 20));
