@@ -6,7 +6,6 @@
 			<strong>Responsable</strong> : César HERNANDEZ ALVAREZ <br />
 			<strong>Statut</strong> : Entrepreneur individuel (EI) <br />
 			<strong>Contact</strong> : c.aha.contact@gmail.com <br />
-			<strong>Adresse</strong> : 5 Nicolas Roret 75013 Paris, FRANCE <br />
 		</p>
 		<h5 class="legal-page-subtitle">Données collectées et finalités</h5>
 		<h6 class="legal-page-subtitle-two">Formulaire de contact</h6>

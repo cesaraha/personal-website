@@ -5,7 +5,6 @@
 		<p class="legal-page-content">
 			<strong>Nom :</strong> César HERNANDEZ ALVAREZ <br />
 			<strong>Statut :</strong> Entrepreneur individuel (EI) <br />
-			<strong>Adresse :</strong> 5 Nicolas Roret 75013 Paris, FRANCE <br />
 			<strong>Téléphone :</strong> +33 6 77 51 42 90 <br />
 			<strong>Email :</strong> c.aha.contact@gmail.com <br />
 			<strong>SIRET :</strong> 98834237400010
