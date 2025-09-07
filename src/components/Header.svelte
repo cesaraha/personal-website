@@ -99,11 +99,11 @@
 			<img src={hamOpen ? 'img/xmark-solid.svg' : 'img/bars-solid.svg'} alt="" />
 		</button>
 		<nav class:show={hamOpen} bind:this={navRef}>
-			<a href={'#'}>{t.home}</a>
-			<a href={'#About'}>{t.about}</a>
-			<a href={'#Skills'}>{t.skills}</a>
-			<a href={'#Projects'}>{t.projects}</a>
-			<a href={'#Contact'}>{t.contact}</a>
+			<a href={'/'}>{t.home}</a>
+			<a href={'/#About'}>{t.about}</a>
+			<a href={'/#Skills'}>{t.skills}</a>
+			<a href={'/#Projects'}>{t.projects}</a>
+			<a href={'/#Contact'}>{t.contact}</a>
 		</nav>
 	</div>
 
