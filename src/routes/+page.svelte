@@ -1,4 +1,6 @@
 <script>
+	import Construction from '../components/Construction.svelte';
+
 	import PythonIcon from '$lib/icons/PythonIcon.svelte';
 	import JupyterIcon from '$lib/icons/JupyterIcon.svelte';
 	import AnacondaIcon from '$lib/icons/AnacondaIcon.svelte';
@@ -67,7 +69,7 @@
 <svelte:head>
 	<title>{t.titlePage}</title>
 </svelte:head>
-
+<!--
 <Header />
 <HeroSection
 	backgroundImage="img/develop.jpg"
@@ -182,3 +184,6 @@
 	/>
 </section>
 <Footer />
+-->
+
+<Construction />
