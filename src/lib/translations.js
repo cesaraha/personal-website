@@ -5,6 +5,12 @@
 export const translations = {
     en: {
         titlePage: "César Aha",
+        construction: {
+            title: "Site under construction",
+            lookingText: "Looking for the portfolio? Click",
+            clickHere: "here",
+            hireText: "If you wish to hire my services, please contact me via email at"
+        },
         navigation: {
             home: "Home",
             about: "About",
@@ -143,6 +149,12 @@ export const translations = {
     },
     fr: {
         titlePage: "César Aha",
+        construction: {
+            title: "Site en construction",
+            lookingText: "Vous cherchez le portfolio ? Cliquez",
+            clickHere: "ici",
+            hireText: "Si vous souhaitez engager mes services, veuillez me contacter par email à"
+        },
         navigation: {
             home: "Accueil",
             about: "À propos",
@@ -281,6 +293,12 @@ export const translations = {
     },
     sp: {
         titlePage: "César Aha",
+        construction: {
+            title: "Sitio en construcción",
+            lookingText: "¿Buscas el portafolio? Haz clic",
+            clickHere: "aquí",
+            hireText: "Si deseas contratar mis servicios, por favor contáctame por email a"
+        },
         navigation: {
             home: "Inicio",
             about: "Acerca de",
