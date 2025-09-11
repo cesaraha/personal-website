@@ -1,9 +1,9 @@
 <script>
 	import Header from "../../components/Header.svelte";
     import Footer from "../../components/Footer.svelte";
-	import ConditionsUtilisation from "../../components/ConditionsUtilisation.svelte";
+	import TermsOfUse from "../../components/TermsOfUse.svelte";
 </script>
 
 <Header />
-<ConditionsUtilisation />
+<TermsOfUse />
 <Footer />
